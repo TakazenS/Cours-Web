@@ -1,0 +1,57 @@
+#index {
+    margin: 0;
+    padding-right: 17%;
+    padding-left: 17%;
+    padding-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#TP3exercice1 {
+    margin: 0;
+    padding-right: 35%;
+    padding-left: 35%;
+    padding-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#TP3exercice2 {
+    margin: 0;
+    padding-right: 17%;
+    padding-left: 17%;
+    padding-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 0;
+}
+
+.menu-bar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-bar a:hover {
+    background-color: #777;
+}
+
+.tirret {
+    list-style-type: "-";
+}
+
+#fnct_perso {
+    height: 0em;
+}
