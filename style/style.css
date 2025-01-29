@@ -1,20 +1,18 @@
-#index {
+.index {
     margin: 0;
-    padding-right: 17%;
-    padding-left: 17%;
     padding-top: 60px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#TP3exercice1 {
+.TP3exercice1 {
     margin: 0;
-    padding-right: 30%;
-    padding-left: 30%;
+    padding-left: 32%;
+    padding-right: 32%;
     padding-top: 60px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#TP3exercice2 {
+.TP3exercice2 {
     margin: 0;
     padding-right: 17%;
     padding-left: 17%;
@@ -48,10 +46,20 @@
     background-color: #777;
 }
 
-.tirret {
+.accueil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    font-size: 4em;
+}
+
+.tiret {
     list-style-type: "-";
 }
 
-#fnct_perso {
-    height: 0em;
+#positionPKey {
+    height: 4px;
 }
+
