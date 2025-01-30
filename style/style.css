@@ -1,22 +1,30 @@
+body {
+    background-color: #fcfaeb;
+}
+
 .index {
     margin: 0;
-    padding-top: 60px;
+    padding-top: 70px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .TP3exercice1 {
     margin: 0;
+    display: flex;
+    flex-direction: column;
     padding-left: 32%;
     padding-right: 32%;
-    padding-top: 60px;
+    padding-top: 70px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .TP3exercice2 {
     margin: 0;
+    display: flex;
+    flex-direction: column;
     padding-right: 17%;
     padding-left: 17%;
-    padding-top: 60px;
+    padding-top: 70px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -47,16 +55,41 @@
 }
 
 .accueil {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    position: relative;
     font-size: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .tiret {
     list-style-type: "-";
+}
+
+.image_container {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.description_cours {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+    position: relative;
+    display: flex;
+}
+
+.texte_description {
+    width: 110%;
+    height: 110%;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: #cfcfcf;
+    border-radius: 15px;
 }
 
 #positionPKey {
