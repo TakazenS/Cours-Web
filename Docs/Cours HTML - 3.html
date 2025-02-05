@@ -1,0 +1,481 @@
+
+<!-- saved from url=(0070)https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Cours HTML - 3</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="./Cours HTML - 3_files/monCSS.css" rel="stylesheet" type="text/css">
+        <script src="./Cours HTML - 3_files/script.js.téléchargement" type="text/javascript"></script>
+    </head>
+    <body class="p">
+        <div class="popup" id="popup" onclick="closePopup()">
+            <img id="popupImage" alt="Popup Image">
+        </div>
+        
+        <div id="toc"><a href="https://samuelgibert.github.io/index.html"> <h4>⌂ go home</h4> </a><br><strong>Sommaire :</strong><ul><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html#introduction">Introduction</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html#les-images-img">Les images : &lt;img&gt;</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html#les-styles-sur-image">Les styles sur image</a></li></ul></div>
+        
+        <h1>HTML 5 – Partie 3</h1>
+        
+        <h2 id="introduction">Introduction</h2>
+        <p>Certains éléments en HTML ne vont être constitués que d’une balise
+            qu’on appelle alors <u>orpheline</u>. Cela va être le cas pour certains
+            éléments qui ne possèdent pas de contenu textuel comme l’élément
+            &lt;br&gt; par exemple qui sert simplement à créer un retour à la ligne
+            en HTML. C'est le cas de la balise &lt;img&gt; qui n'a pas pour vocation
+            de contenir du texte par définition.</p>
+        <p>Voici quelques exemples :</p>
+        <p class="exemple">
+            <code>
+&lt;br /&gt;
+&lt;hr /&gt;
+&lt;img … /&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 3_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html" target="_blank" class="run-button">
+                <img src="./Cours HTML - 3_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+      
+        <h2 id="les-images-img">Les images : &lt;img&gt;</h2>
+        <h3 id="la-balise-img">La balise &lt;img&gt;</h3>
+        <p>L’insertion d’une image est obtenue par la balise &lt;img /&gt;.</p>
+        <p>C’est une balise unique de type <u>en ligne</u>. Donc chaque image va
+            se coller les unes aux autres dans la page en fonction de ses
+            dimensions</p>
+        <p>La syntaxe de base est :</p>
+        <p class="exemple">
+            <code>
+&lt;img src="chemin relatif ou absolu vers l'image" &gt; &lt;!—le /de fin n'est pas obligatoire --&gt;
+&lt;img src=" chemin relatif ou absolu vers l'image " /&gt;  
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 3_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html" target="_blank" class="run-button">
+                <img src="./Cours HTML - 3_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <ul>
+            <li><p>L’attribut&nbsp;src indique que l’image provient d’un fichier externe.
+                    Celui-ci précise l’adresse relative ou absolue (comme pour la balise
+                    &lt;a&gt;) du fichier image qui doit être affiché dans la page.</p></li>
+        </ul>
+        <p>Exemples :</p>
+        
+        
+ 
+        <p class="exemple">
+            <code>
+&lt;img src="http://www.html5.com/images/image.png" /&gt;&lt;a href="lien"&gt;
+&lt;img src= ".image/img1.png" /&gt;&lt;/a&gt;
+&lt;img src="image.png" /&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 3_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html" target="_blank" class="run-button">
+                <img src="./Cours HTML - 3_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+       
+        <p>Si le lien vers l'image est dit "mort" une image cassée s'affichera
+            :</p>
+        <div class="image-container"><img src="./Cours HTML - 3_files/Image1.png" alt="" onclick="openPopup(this)"></div>
+        <ul>
+            <li><p>Les attributs&nbsp;height&nbsp;et&nbsp;width permettent de définir la hauteur et
+                    la largeur en pixels. Sans précisions de taille, l’image prend sa
+                    dimension normale. Plus l'image est volumineuse, plus elle mettra du
+                    temps à s'afficher dans la page. Il est donc important d'utiliser des
+                    outils de retouche d'image pour adapter celle-ci pour le Web.</p></li>
+        </ul>
+        <p>Pour une image destinée à un fond de site qui occupera 100% de la
+            page, il faut arriver à un compromis entre taille/poids et qualité sur
+            tous les écrans. Nous recommandons une taille de 1920 x 1080px qui
+            permet un affichage correct sur la majorité des écrans.</p>
+       
+        
+        <p class="exemple">
+            <code>
+&lt;img src="./images/img1.png" width="100px" height="100px"/&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 3_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html" target="_blank" class="run-button">
+                <img src="./Cours HTML - 3_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        
+        
+        <p>Si l'image dépasse la résolution de l'écran des scroll barre
+            verticale et/ou horizontale sont ajoutés à la page ce qui esthétiquement
+            n'est pas le plus adapté.</p>
+         <div class="image-container"><img src="./Cours HTML - 3_files/Image2.png" onclick="openPopup(this)" alt=""></div>
+        <p>Une image trop petite avec une résolution modifiée avec width et
+            height perdra en netteté.</p>
+        <p><u>Exemple</u> : la même image affichée avec la même largeur et
+            hauteur, mais avec une résolution différente. La différence est claire
+            et nette</p>
+        <p class="exemple">
+            <code>
+&lt;img src="paysage3.jpeg" alt="" width="800px" height="500px"/&gt;
+&lt;img src="paysage2.jpeg" alt="" width="800px" height="500px"/&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 3_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html" target="_blank" class="run-button">
+                <img src="./Cours HTML - 3_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+          
+        
+        <div class="image-container">
+            <img src="./Cours HTML - 3_files/Image3.png" onclick="openPopup(this)" title="résolution de 19x10" alt="">
+            <img src="./Cours HTML - 3_files/Image4.png" onclick="openPopup(this)" title="résolution de 1920x1080" alt="">
+        </div>
+        <p>Pour obtenir une image qui prend toute la largeur de la page et qui
+            s'adapte à votre écran, le pixel n'est pas l'unité adaptée. Ici la
+            solution est d'utiliser le % sur la largeur de l'image. Modifier la
+            hauteur dans l'exemple n'aurait pas de sens et déformerait l'image en
+            cassant les proportions.</p>
+        <p><u>Exemple :</u></p>
+        
+        <p class="exemple">
+            <code>
+&lt;img src="paysage2.jpeg" alt="" width="100%"/&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 3_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html" target="_blank" class="run-button">
+                <img src="./Cours HTML - 3_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        
+        <ul>
+            <li><p>L’attribut alt est obligatoire. Il contient une description de
+                    l’image. Cet attribut sert de texte de remplacement si, pour une raison
+                    ou une autre, l'image ne peut pas s'afficher. Elle est aussi utile aux
+                    moteurs de recherche pour indexer les images. Enfin, les liseuses de
+                    site (pour les malvoyants) lisent cet attribut pour remplacer les
+                    images.</p></li>
+            <li><p>L'attribut title permet d'afficher une infobulle lors du survol
+                    de l'image avec la souris. Peut prendre la même valeur que alt</p></li>
+        </ul>
+        <h3 id="les-formats-et-poids-des-images">Les formats et poids des
+            images</h3>
+        <p>Pour que le téléchargement des images soit rapide il faut des formats
+            d’image qui sont compressés : GIF, JPG, PNG.</p>
+        <ul>
+            <li><p>GIF : 256 couleurs, animation, mode transparent : utilisé pour
+                    les logos, les boutons, ou animations</p></li>
+            <li><p>JPG: 16.7 millions de couleurs, perte de qualité après
+                    compression, pas d’animation, ni transparence : idéal pour les
+                    photos.</p></li>
+            <li><p>PNG : format plus récent, recommandé par le W3C, 16.7 millions de
+                    couleurs, compression sans perte de qualité, permet la transparence, pas
+                    d’animation : bon compromis entre GIF et JPG.</p></li>
+            <li><p>Tous autres formats, notamment le BMP est a évité, car trop
+                    lourd.</p></li>
+        </ul>
+        <p>Une photo prise d’un appareil photo pèse entre 4 et 8 Mo. Il faudra
+            réduire le poids de la photo avant de l’intégrer dans votre page Web.
+            Des logiciels gratuits comme GIMP, Paint.net, etc. permettent de
+            retoucher rapidement une image.</p>
+        <p><u>Remarque</u> : reprenons l'image de la figure 2 de 1920 x 1080 px.
+            Sa taille sur le disque fait par exemple 700ko. Même en réduisant sa
+            taille d'affichage à 100px en largeur (la hauteur s'adapte en respectant
+            les proportions), il s'agit toujours de la même image. En réalité nous
+            n'avons qu'effectué un "zoom moins" et le poids de l'image est toujours
+            de 700ko</p>
+        <p class="exemple">
+            <code>
+&lt;img src="paysage2.jpeg" alt="" width="100px"/&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 3_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html" target="_blank" class="run-button">
+                <img src="./Cours HTML - 3_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <div class="image-container"><img src="./Cours HTML - 3_files/Image5.png" onclick="openPopup(this)" alt=""></div>
+        
+        <p>700ko ce n'est pas une image
+            trop importante. Quand est-il d'une image de 4Mo ou plus. Une solution
+            consiste à minimiser l'image de base.</p>
+        <p>Dans la page web, on propose d'afficher d'abord l'image mini en lien
+            cliquable. Lorsqu'on clique dessus, l'image principale s'affiche dans
+            une nouvelle fenêtre par exemple.</p>
+        <p><u>Exemple :</u></p>
+        <p class="exemple">
+            <code>
+&lt;a href="paysage2.jpeg" target="_blank"&gt;
+        &lt;img src="paysage2-mini.jpeg" alt=""/&gt;
+&lt;/a&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 3_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html" target="_blank" class="run-button">
+                <img src="./Cours HTML - 3_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <p>Rappelons aussi que vous hébergez votre site. Suivant ce dernier vous
+            disposez d’un espace serveur et d’un débit limités. Il vous faudra donc
+            déjà faire attention à ne pas le saturer avec des images inutilement
+            lourdes.</p>
+        <h3 id="la-balise-figure-et-figcaption">La balise &lt;figure&gt; et
+            &lt;figCaption&gt;</h3>
+        <p>L’élément HTML&nbsp;&lt;figure&gt;&nbsp;permet d’insérer des éléments
+            d’illustration. C’est une balise du type conteneur multimédia :
+            &lt;video&gt;, &lt;audio&gt;, et &lt;img&gt;. L’élément
+            &lt;figcaption&gt; permet d’indiquer une légende.</p>
+        <p>La balise &lt;figure&gt; a un rôle avant tout sémantique. Cela veut
+            dire qu'elle indique au moteur de recherche que l'image a du sens et
+            qu'elle est importante pour la bonne compréhension du texte.</p>
+        <p class="exemple">
+            <code>
+&lt;figure&gt;
+        &lt;img src=<strong>"./images/img1.png"</strong> alt=<strong>"Paysage de montagne"</strong> title=<strong>"paysage de montagne"</strong>/&gt;
+        &lt;figcaption&gt;<strong>un paysage de  montagne</strong>&lt;/figcaption&gt;
+&lt;/figure&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 3_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html" target="_blank" class="run-button">
+                <img src="./Cours HTML - 3_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <h2 id="les-styles-sur-image">Les styles sur image</h2>
+        <h3 id="image-darrière-plan">image d'arriÈre plan</h3>
+        <p>La propriété css <strong>background-image</strong> permet d'ajouter
+            une image en fond d'un élément html. Souvent appliqué sur la balise
+            &lt;body&gt; elle peut s'appliquer à tous type de boites &lt;p&gt;,
+            &lt;hx&gt;, &lt;div&gt; etc…</p>
+        <p>On utilise cette propriété lorsque l'image n'apporte pas de sens à la
+            page et que celle-ci est purement décorative.</p>
+        <p><strong><u>Remarque :</u></strong></p>
+        <p>On ne met jamais en fond une image porteuse d'information. Ces images
+            se mettent "en dur" dans le code html avec un texte alternatif (alt) qui
+            va bien. Attention aussi à utiliser une image qui ne gênera pas la
+            lecture de la page avec une couleur de fond différente de celle de la
+            police de caractère.</p>
+        <p>Contrairement aux couches d'images qui peuvent être multiples, on ne
+            peut avoir qu'une seule couche de couleur pour un élément donné. Donc si
+            une couche de couleur est définie avec
+            <strong>background-color</strong>, elle est dessinée en dessous de
+            l'image est n'apparaitra que si l'image n'est pas chargée.</p>
+        <p>De plus la propriété <strong>background-image</strong> autorise
+            plusieurs images. Dans ce cas elles vont se superposer les unes aux
+            autres. Bien entendu si les images ne gèrent pas la transparence dans ce
+            cas, c'est la première image qui sera affichée selon le principe des
+            calques.</p>
+        <p>La propriété <strong>background-repeat</strong> définit la façon dont
+            les images utilisées en arrière-plan sont répétées
+            (<strong>repeat</strong>). Une image d'arrière-plan pourra ainsi être
+            répétée sur l'axe horizontal <strong>repeat-x</strong>, l'axe vertical
+            <strong>repeat-y</strong> ou bien ne pas être répétée, avec la valeur
+            <strong>no-repeat</strong>.</p>
+        <p><strong>background-size</strong> définit la taille des images
+            d'arrière-plan pour l'élément. Avec la valeur <strong>contain</strong>
+            l'image est redimensionnée afin qu'elle soit la plus grande possible et
+            que l'image conserve ses proportions, Les zones éventuellement vides
+            sont remplies avec la couleur d'arrière-plan. Avec
+            <strong>cover</strong> les parties qui dépassent sont rognées. Cette
+            propriété permet aussi de définir une taille personnelle en px ou %.</p>
+        <p><strong>background-position</strong> définit la position de départ de
+            l'image sur l'axe des <strong>x</strong> et des <strong>y</strong>. Par
+            défaut, l'image se positionne en haut à gauche de l'écran. Sa valeur
+            peut être un mot-clé (<strong>top, right, bottom, left et
+                center</strong>), une longueur ou un pourcentage.</p>
+        <p>La propriété <strong>background-attachment</strong> définit si la
+            position de l'image d'arrière-plan est fixée dans la zone
+            d'affichage.</p>
+        <h3 id="lopacité-dune-image">L'opacité d'une image</h3>
+        <p>La propriété CSS <strong>opacity</strong> permet de gérer la
+            transparence d'une image ou de tous autres éléments HTML. Cette
+            propriété est la même dans <strong>background-color</strong>. C'est une
+            valeur comprise entre <strong>0</strong> (complètement transparent) et
+            <strong>1</strong> (complètement visible). Cette propriété est prise en
+            charge par la plupart des navigateurs, mais certains plus anciens
+            utilisent une autre propriété nomme <strong>filter</strong>.</p>
+        <p><u>Exemple :</u> ici les images ne sont pas transparentes (1) en
+            temps normal. En cas de survol de l'image, l'opacité passe à 0.5.</p>
+        <p class="exemple">
+            <code>
+img.opacite{
+    opacity: 1;
+}
+img.opacite<em>:hover</em>{
+    opacity: 0.5;
+}
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 3_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html" target="_blank" class="run-button">
+                <img src="./Cours HTML - 3_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+         <div class="image-container">
+             <img src="./Cours HTML - 3_files/Image6.png" onclick="openPopup(this)" alt="">
+             <img src="./Cours HTML - 3_files/Image7.png" onclick="openPopup(this)" alt="">
+         </div>
+         
+         <p>Attention une image même
+            complètement transparente (opacity à 0) reste un bloc à part entière
+            dans la page. Elle garde sa position dans la page. Dans l'exemple le
+            &lt;p&gt; suivant, l'image restera à la même position.</p>
+        <h3 id="les-dimensions-dune-image">Les dimensions d'une image</h3>
+        <p>Nous l'avons vu dans la partie html il est possible de modifier la
+            largeur et la hauteur d'une image avec les attributs
+            <strong>width</strong> et <strong>height.</strong> Ces mêmes attributs
+            existent en CSS pour tout type de balise html y compris une image.</p>
+        <p>Si seulement une seule de ses propriétés est définie (width par
+            exemple) le navigateur redimensionne également l'autre dimension (height
+            par exemple) en respectant les proportions de l'image.</p>
+        <p>L'idéal pour ces propriétés
+            est d'utiliser comme unité le % ce qui va permettre à l'image de
+            s'adapter à la résolution de l'écran. Dans l'exemple qui suit 2 images
+            avec 2 résolutions d'écran différentes. L'image de gauche est en px,
+            celle de droite en %.</p>
+        
+        <div class="image-container"> 
+            <img src="./Cours HTML - 3_files/Image8.png" onclick="openPopup(this)" title="Résolution de 900x900px">
+           <img src="./Cours HTML - 3_files/Image9.png" onclick="openPopup(this)" title="Résolution de 500x900px">
+        </div>
+        <div class="image-container"> 
+            <img src="./Cours HTML - 3_files/Image10.png" onclick="openPopup(this)" title="Résolution de 300x900px" alt="">
+        </div>
+        <p>Si l'on réduit trop (ou agrandi trop) la résolution de l'écran,
+            l'image risque de ne plus être visible correctement. Pour éviter cela il
+            existe 4 propriétés qui fixent des limites à la hauteur et à la largeur
+            : <strong>min-width, max_width, min_height, max-height</strong> qui
+            permettent de définir la largeur minimum et maximum, ainsi que la
+            hauteur minimum et maximum que l'on ne doit pas dépasser.</p>
+        <p>Dans cet exemple, le premier à une largeur de 200px, l'autre image
+            est en pourcentage (50%) avec une largeur minimum de 200px. Après avoir
+            baissé la résolution de l'écran, les 2 images ont la même largeur.</p>
+        <p><strong>Code CSS:</strong></p>
+        <p class="exemple">
+            <code>
+#img2       //image de gauche Figure3,4 et 5: taille fixe
+{
+    width: 200px;
+} 
+
+#img3{
+    width: 50%;         // l'image de droite s'adapte à 50% (Figure 3 et 4)
+    min-width: 200px;   //, mais pas moins que 200px : figure 5.
+}
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 3_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html" target="_blank" class="run-button">
+                <img src="./Cours HTML - 3_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <p>Par contre si les 2 propriétés sont définies les proportions choisies
+            risquent de déformer l'image.</p>
+         <div class="image-container"> 
+            <img src="./Cours HTML - 3_files/Image11.png" onclick="openPopup(this)" alt="">
+        </div>
+        <p>Parfois on est contraint de
+            mettre une image dans une "boîte" avec une dimension fixe (par exemple
+            200x200px). Comme nous l'avons expliqué précédemment le risque est
+            d'avoir une image déformée. La propriété <strong>object-fit</strong>
+            avec la valeur <strong>cover</strong> permet de réduire cette
+            déformation tout en ayant l'image dans la "boîte". On note que l'image
+            de droite est beaucoup plus nette que celle de gauche, mais elle n'est
+            pas affichée dans sa globalité.</p>
+        <p>Code :</p>
+        <p class="exemple">
+            <code>
+#img4{
+        height: 200px;
+        width: 200px;
+}
+#img5{
+    height: 200px;
+    object-fit: cover;
+    width: 200px;
+}
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 3_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_3_html.html" target="_blank" class="run-button">
+                <img src="./Cours HTML - 3_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <h3 id="lalignement-des-images">L'alignement des images</h3>
+        <p>La propriété <strong>vertical-align</strong> permet de définir
+            l'alignement des éléments de type <strong>inline</strong> (en ligne) .
+            Les &lt;img&gt; et &lt;span&gt; en font parties.</p>
+        <p><u>Rappel</u> : un élément <strong>inline</strong> prend en largeur
+            et en hauteur uniquement la place nécessaire pas plus, ni moins.</p>
+        <p>Prenons l'exemple suivant : 3 images de tailles différentes et du
+            texte entre les images dans une balise conteneur &lt;div&gt;. On
+            constate que par défaut les images et le texte se placent sur une ligne
+            imaginaire représentée ici en rouge que l'on appellera ligne de base
+            fluctuante. Par défaut tous nos éléments ont donc leur propriétés
+            <strong>vertical-align</strong> à la valeur
+            <strong>baseline</strong></p>
+         <div class="image-container"> 
+            <img src="./Cours HTML - 3_files/Image12.png" onclick="openPopup(this)" alt="">
+        </div>
+       <p>Supposons que la
+            1<sup>ère</sup> et la dernière image soient alignées verticalement au
+            milieu (<strong>middle</strong>). Le positionnement de cette image va se
+            faire par rapport ici à notre ligne de base ici en rouge.</p>
+         <div class="image-container"> 
+            <img src="./Cours HTML - 3_files/Image13.png" onclick="openPopup(this)" alt="">
+        </div>
+       
+        <p>Avec les 3 images positionnées au <strong>milieu.</strong> Les
+            éléments sont restés sur <strong>baseline</strong> ce qui nous permet de
+            repérer la ligne de base.</p>
+        <p>Pour bien comprendre encore un exemple. La 2<sup>e</sup> image est
+            positionnée au milieu. Les autres éléments sont sur baseline. Cela donne
+            logiquement.</p>
+         <div class="image-container"> 
+            <img src="./Cours HTML - 3_files/Image14.png" onclick="openPopup(this)" alt="">
+        </div>
+        <p>Pour mieux comprendre ce style :</p>
+        <p><a href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_vertical-align&amp;preval=baseline">https://www.w3schools.com/cssref/playit.asp?filename=playcss_vertical-align&amp;preval=baseline</a></p>
+
+                
+        <script>  generateToc('toc', ['h2']); </script>
+    
+
+</body></html>

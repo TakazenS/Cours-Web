@@ -1,0 +1,1558 @@
+
+<!-- saved from url=(0069)https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>TODO supply a title</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./TODO supply a title_files/monCSS.css" rel="stylesheet" type="text/css">
+        <script src="./TODO supply a title_files/script.js.téléchargement" type="text/javascript"></script>
+
+    </head>
+    <body>
+        <div class="popup" id="popup" onclick="closePopup()">
+            <img id="popupImage" alt="Popup Image">
+        </div>
+
+        <div id="toc"><a href="https://samuelgibert.github.io/index.html"> <h4>⌂ go home</h4> </a><br><strong>Sommaire :</strong><ul><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html#le-principe-des-feuilles-de-style">Le Principe des feuilles de
+            style</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html#historique">Historique</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html#int%C3%A9grer-les-styles-css">Intégrer les styles CSS</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html#la-d%C3%A9claration-de-style-css">La déclaration de style CSS</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html#les-selecteurs">Les selecteurs</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html#notions-de-cascade">Notions de cascade</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html#une-image-contenant-texte-clipart-description-g%C3%A9n%C3%A9r%C3%A9e-automatiquementla-notion-dheritage">La
+            notion d'heritage</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html#les-unites-de-mesures">Les unites de mesures</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html#les-couleurs">Les couleurs</a></li></ul></div>
+        <h1>CSS 3 – Partie 1</h1>
+
+      
+     
+        
+        <h2 id="le-principe-des-feuilles-de-style">Le Principe des feuilles de
+            style</h2>
+        <p>Les feuilles de style sont des ajouts de code au langage HTML qui
+            vont prendre en charge la <u>présentation</u> du document.</p>
+        <p>Le concept de feuilles de style repose sur le
+            <strong>concept</strong> de la <u>séparation</u> du
+            <strong>contenu</strong> et de la <strong>présentation</strong> dans
+            l’élaboration d’applications HTML.</p>
+        <div class="image-container"><img src="./TODO supply a title_files/Image1.png" alt=""></div>
+        
+        <p>Le rôle du HTML se limite ainsi à la structure de la page. Pour aller
+            au bout du <strong>concept</strong> presque tous les éléments de
+            présentation des balises ou des attributs présents dans le HTML 4.0 ont
+            disparu.</p>
+        <p>Citons, par exemple, l’absence en HTML5 de
+            <u>l’attribut</u>&nbsp;border&nbsp;qui fixe une bordure à la balise de
+            tableau&nbsp;&lt;table&gt;</p>
+        <p>Citons encore la balise &lt;font&gt; qui est supprimé. Ainsi la ligne
+            suivante :</p>
+        
+        <p class="exemple">
+            <code>
+&lt;h1&gt;&lt;font color="green"&gt;TODO write  content&lt;/font&gt;&lt;/h1&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./TODO supply a title_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                <img src="./TODO supply a title_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <p>Est remplacé par la ligne suivante avec l'attribut
+            <strong>style.</strong></p>
+        <p class="exemple">
+            <code>
+&lt;h1 style="color:red"&gt; TODO write content&lt;/h1&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./TODO supply a title_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                <img src="./TODO supply a title_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <p>C'est pourquoi les styles CSS seront définis dans des feuilles.</p>
+        <p>La modification d'un style dans cette feuille, et ce sont des
+            centaines de pages qui voient leurs présentations modifiées.</p>
+        <h2 id="historique">Historique</h2>
+        <p>Les premières pages Web étaient pour le moins austères avec leur fond
+            de page gris, un texte de couleur noire et structuré uniquement avec des
+            titres et des listes.</p>
+        <p>Assez rapidement cependant, dès 1994, devant les relatives faiblesses
+            du HTML en matière de présentation, l’idée d’adjoindre au HTML des
+            styles, comme dans les logiciels de traitement de texte, fit son
+            apparition.</p>
+        <p>Lorsqu’en 1995 le W3C (pour World Wide Web Consortium) commença à
+            fonctionner, une de ses premières réalisations concrètes fut la
+            publication en novembre 1995 d’une première ébauche de travail (working
+            draft) sur les feuilles de style. Ce document devint une recommandation
+            officielle le 17 décembre 1996 sous le nom de "Feuilles de style en
+            cascade niveau 1" (Cascading Style Sheets, level 1) ou de manière
+            abrégée CSS1.</p>
+        <p>Dans la foulée, un groupe de travail spécifique fut créé avec comme
+            mission d’étendre le concept des feuilles de style. Une nouvelle
+            recommandation fut publiée le 12 mai 1998 sous le vocable CSS2.</p>
+        <p>Quelques corrections et des extensions mineures sont proposées
+            courant 2006 sous la dénomination CSS2.1.</p>
+        
+        <div class="image-container"><img src="./TODO supply a title_files/Image2.png" alt=""></div>
+        Depuis 2009, il est question
+            du CSS3 qui est un ensemble de module. Pour connaître les modules des
+            CSS3, voici l’URL du W3C indispensable à connaître et à consulter
+            régulièrement :&nbsp;<a href="http://www.w3.org/Style/CSS/current-work#CSS3" target="_blank">http://www.w3.org/Style/CSS/current-work#CSS3</a>.<p></p>
+        <p>Pour chaque module le W3C donne une indication de statuts avec un
+            code couleur. Ici REC&nbsp;: le module est officiellement terminé et est
+            proposé en recommandation.</p>
+        <p>Cela signifie que CSS 3 est un standard du Web qui évolue encore.
+            Rien n'est figé. Ce qui est vrai aujourd'hui peut être modifié demain.
+            Il convient de savoir si telle ou telle propriété est exploitable ou
+            non, si elle est reconnue par tel ou tel navigateur et aussi selon la
+            version des navigateurs. Pour ce faire, la solution la plus utilisée
+            actuellement est de tester les propriétés sur le site&nbsp;<strong>Can I
+                use</strong>&nbsp;:&nbsp;<a href="http://caniuse.com/" target="_blank">http://caniuse.com</a>.</p>
+        <h2 id="intégrer-les-styles-css">Intégrer les styles CSS</h2>
+        <p>Il faut donc lier la structure HTML à la mise en forme et mise en
+            page CSS. Pour ce faire, nous avons plusieurs possibilités qui vont
+            répondre chacune à une fonctionnalité précise.</p>
+        <h3 id="style-en-ligne-le-plus-prioritaire">STYLE EN LIGNE : le plus
+            prioritaire</h3>
+        <p>Déclarer les styles CSS directement dans l’élément HTML concerné ou
+            <strong><u>style en ligne</u></strong>, avec l’attribut global&nbsp;style.
+            Cette possibilité permet d’appliquer un style CSS de manière unique.</p>
+        <p>Cette façon de procéder est cependant à éviter pour 2 raisons
+            principales :</p>
+        <ol type="1">
+            <li><p>Pour respecter le principe de la séparation du contenu et de la
+                    présentation.</p></li>
+            <li><p>Il n'est pas rare de rencontrer des sites de plusieurs centaines
+                    de pages. Une mise à jour graphique peut ainsi constituer un travail
+                    gigantesque si le style est appliqué de façon individuelle à chaque
+                    balise</p></li>
+        </ol>
+        <p><u>Exemple :</u></p>
+        <table>
+            <colgroup>
+                <col style="width: 63%">
+                <col style="width: 36%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th style="text-align: left;"><strong>HTML</strong></th>
+                    <th><strong>VISUEL</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: left;">
+                        
+                        <p class="exemple">
+                            <code>
+&lt;h1 style="color: red;"&gt;titre en rouge&lt;/h1&gt;
+&lt;h1 style="font-style: italic;"&gt;titre en italic&lt;/h1&gt;
+&lt;h1&gt; titre en style normal &lt;/h1&gt;
+&lt;!—style par défaut --&gt;
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p>
+                    </td>
+                    <td>  <div class="image-container"> <img src="./TODO supply a title_files/Image3.png" alt=""></div>
+</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <p><u>Remarque</u> : chaque élément HTML possède un style par défaut.
+            Dans le dernier exemple, pour la balise <strong>h1</strong>, après
+            inspection de l'élément (F12 dans le navigateur) nous avons le style
+            suivant :</p>
+        <div class="image-container"><img src="./TODO supply a title_files/Image4.png" alt=""></div>
+        <p>Une balise <strong>h1</strong> s'affiche par défaut avec une taille
+            de 2em, en gras, et avec des marges de 0,67em.</p>
+        <p>L'application d'un style en ligne vient à
+            <strong><u>ajouter</u></strong> et/ou <strong><u>remplacer</u></strong>
+            au style par défaut une propriété CSS.</p>
+        <p><u>Dans l'exemple 1</u> : nous <u>ajoutons</u> au style par défaut,
+            la propriété <strong>color</strong>. Notre titre <strong>h1</strong>
+            aura sa couleur en rouge.</p>
+        <p><u>Dans l'exemple 2</u> : les propriétés CSS display et font-size
+            sont <u>remplacées</u> par de nouvelles.</p>
+        
+         <div class="image-container">
+             <img src="./TODO supply a title_files/Image5.png" alt="">
+             <img src="./TODO supply a title_files/Image6.png" alt="">
+         </div>
+        
+       
+        <h3 id="style-interne">STYLE INTERNE</h3>
+        <p>Permet d'intégrer les styles CSS dans la page HTML, avec la
+            balise&nbsp;&lt;style&gt;, dans la balise&nbsp;&lt;head&gt;. Tous les styles CSS
+            définis dans cette page pourront être appliqués à tous les éléments HTML
+            de cette page.</p>
+        <p>On note qu'il est toujours possible d'intégrer du style en ligne.
+            Dans ce cas là, c'est ce dernier le plus prioritaire avec toujours le
+            même principe d'ajout ou de remplacement de propriété CSS.</p>
+        <p><u>Exemple :</u> Toutes les balise &lt;h1&gt; sont en couleur rouge
+            par défaut. Le style en ligne est plus prioritaire.</p>
+        <table>
+            <colgroup>
+                <col style="width: 66%">
+                <col style="width: 33%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th style="text-align: left;"><strong>HTML</strong></th>
+                    <th><strong>VISUEL</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: left;">
+                        <p class="exemple">
+                            <code>
+&lt;!-- dans la balise &lt;HEAD&gt;--&gt;
+&lt;style&gt;
+h1 {
+    color: red;
+}
+&lt;!-- dans la balise &lt;BODY&gt; --&gt;
+&lt;h1&gt; titre niveau 1 en rouge &lt;/h1&gt;
+&lt;h1 style="font-style: italic;"&gt; titre niveau 1 en rouge et en italique &lt;/h1&gt;
+&lt;h1 style="color: blue;"&gt; titre niveau 1 en bleu&lt;/h1&gt;
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p>    
+                    
+                    
+                    </td>
+                    <td>
+                        <div class="image-container"><img src="./TODO supply a title_files/Image7.png"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Dans le dernier exemple l'inspection de l'élément donne le résultat
+            suivant :</p>
+        <div class="image-container"><img src="./TODO supply a title_files/Image8.png" alt=""></div>
+       
+        
+        
+        <h3 id="style-externe">style externe</h3>
+        <p>Créer un fichier .<strong>css</strong> (ou plusieurs) séparée qui
+            contiendra toutes les règles CSS. Cette fois la portée est maximale,
+            puisque tous les styles définis dans le fichier .css pourront être
+            appliqués à tous les éléments HTML de toutes les pages Web. Cette façon
+            de procéder respecte au mieux la séparation du contenu et de la
+            présentation.&nbsp;</p>
+        <p>Un fichier .css contient uniquement des déclarations de style. Il ne
+            contient pas de balises HTML</p>
+        <p>Pour lier la page HTML avec sa feuille de style, on ajoutera entre
+            les balises&nbsp;&lt;head&gt;&nbsp;et&nbsp;&lt;/head&gt;, un ou plusieurs liens vers la
+            feuille de style en question :</p>
+        
+        <p class="exemple">
+            <code>
+&lt;link href="fichier.css" rel="stylesheet" type="text/css"/&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./TODO supply a title_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                <img src="./TODO supply a title_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        
+        <p>Dans le code suivant on note les 4 niveaux de style qui
+            <u>s'ajoutent</u> les uns aux autres du plus global au plus prioritaire
+            :</p>
+        <p><strong>STYLE FINAL</strong> = STYLE PAR DEFAUT + STYLE EXTERNE +
+            STYLE INTERNE + STYLE EN LIGNE :</p>
+        
+        <table>
+            <colgroup>
+                <col style="width: 58%">
+                <col style="width: 41%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th><strong>HTML</strong></th>
+                    <th><strong>CSS externe</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p class="exemple">
+                            <code>
+                                
+&lt;link href="style.css" rel="stylesheet" type="text/css"/&gt;
+&lt;!-- dans la balise &lt;HEAD&gt; --&gt;
+&lt;style&gt;
+    h1 { color: red; }
+&lt;/style&gt;
+...
+&lt;!-- dans la balise &lt;BODY&gt; --&gt;
+&lt;h1&gt; titre niveau 1 en rouge &lt;/h1&gt;
+&lt;h1 style="font-style: italic;"&gt; titre niveau 1 en rouge et en
+    italique &lt;/h1&gt;
+&lt;h1 style="color: blue;"&gt; titre niveau 1 en bleu&lt;/h1&gt;
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p>
+                    </td>
+                    <td>
+                        <p class="exemple">
+                            <code>
+                                
+/*commentaire : fichier style.css*/
+/* ajout d'une ligne au-dessus du titre */
+h1 {
+    text-decoration: overline;
+}
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="image-container"><img src="./TODO supply a title_files/Image9.png" alt=""></div>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="la-déclaration-de-style-css">La déclaration de style CSS</h2>
+        <p>La déclaration d’un style s’effectue par le binôme</p>
+        <p><strong>propriété</strong> : valeur ;</p>
+        <p><u>Exemple :</u></p>
+        <p>L'exemple suivant pourrait se lire : appliquer sur les balises h1 une
+            couleur d'arrière-plan jaune sur texte rouge, et une décoration de texte
+            souligné</p>
+        <table>
+            <colgroup>
+                <col style="width: 50%">
+                <col style="width: 49%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th style="text-align: left;"><strong>CSS</strong></th>
+                    <th><strong>VISUEL</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: left;">
+                        <p class="exemple">
+                            <code>
+h1 {
+    color: red;
+    text-decoration: underline;
+    background-color: yellow;
+}
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                    <td><div class="image-container"><img src="./TODO supply a title_files/Image10.png" alt=""></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><u>Détaillons cette déclaration :</u></p>
+        <ul>
+            <li><p>La <strong><u>propriété</u></strong> identifie ce qui sera défini
+                    dans le style adopté. Ces propriétés sont nombreuses et sont énumérées
+                    dans les spécifications CSS :</p>
+                <ul>
+                    <li><p>Police de caractère (font)</p></li>
+                    <li><p>Sur le texte (text)</p></li>
+                    <li><p>Sur l’arrière-plan (background)</p></li>
+                    <li><p>Sur la bordure (border), etc.</p></li>
+                </ul></li>
+            <li><p>La <strong><u>valeur</u></strong> identifie la nature de l’effet
+                    de style souhaité. La valeur s’exprime par</p>
+                <ul>
+                    <li><p>un mot-clé</p></li>
+                    <li><p>un pourcentage</p></li>
+                    <li><p>une grandeur en fonction de la propriété à laquelle elle est
+                            assignée.</p></li>
+                    <li><p>Et même par une fonction (par exemple rgb())</p></li>
+                </ul></li>
+        </ul>
+        <ul>
+            <li><p>Une déclaration de style se termine toujours par un
+                    point-virgule.</p></li>
+            <li><p>Il est possible de définir plusieurs déclarations de style pour
+                    un sélecteur. Un par ligne pour plus de lisibilité.</p></li>
+        </ul>
+        <p><u>Par exemple :</u></p>
+        
+        <p class="exemple">
+            <code>
+propriété1:valeur;
+propriété2:valeur;
+propriété3:valeur;
+            </code>
+            <button class="copy-button"> 
+                <img src="./TODO supply a title_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                <img src="./TODO supply a title_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+     
+        <h2 id="les-selecteurs">Les selecteurs</h2>
+        <p>Ce sont les sélecteurs qui indiquent où s’appliquent les styles CSS.
+            Les sélecteurs et les styles CSS constituent les règles CSS.</p>
+        <p>Quelques règles de syntaxe sur le nommage des sélecteurs :</p>
+        <ul>
+            <li><p>Le nom des sélecteurs n’est pas sensible à la casse. Par contre,
+                    les éléments inclus, comme les polices de caractères ou les URL y sont
+                    sensibles. Donc, pour plus de facilité, il est d’usage de n’utiliser que
+                    des minuscules.</p></li>
+            <li><p>Le nom des sélecteurs ne doit pas comporter d’espaces, de
+                    caractères accentués, ni de caractères spéciaux (+, $, @,
+                    #...).</p></li>
+            <li><p>Enfin, le nom des sélecteurs ne doit pas commencer par un
+                    chiffre.</p></li>
+        </ul>
+        <p>Nous allons détailler 3 types de sélecteurs pour commencer : TYPE,
+            CLASSE, D'IDENTIFICATION</p>
+        
+        
+        <h3 id="les-sélecteurs-de-type">Les sélecteurs de
+            <strong>type</strong></h3>
+        
+        <p>La syntaxe d’un sélecteur de type est la dénomination de la balise
+            suivie de la déclaration de style comprise entre des accolades ouvrantes
+            et fermantes. Ce type de sélecteur cible tous les éléments HTML du type
+            du sélecteur</p>
+        <p class="exemple">
+            <code>
+ <strong>NomDeLaBalise</strong> { déclaration de style}
+            </code>
+            <button class="copy-button"> 
+                <img src="./TODO supply a title_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                <img src="./TODO supply a title_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <p>Exemple:</p>
+        <p class="exemple">
+            <code>
+/* Cibler tous les éléments &lt;p&gt; et appliquer le style sur <u>toutes</u> ces balises*/
+<strong>p</strong> { 
+    background-color: red;
+}
+            </code>
+            <button class="copy-button"> 
+                <img src="./TODO supply a title_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+           
+            <a href="https://codepen.io/samuel-gibert/pen/WNZJzNy" target="_blank" class="run-button">
+                <img src="./TODO supply a title_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        
+        <p>Remarquez que l’on reprend simplement la dénomination de l’élément
+            HTML sans ses signes inférieur (&lt;) et supérieur (&gt;). Donc
+            uniquement le texte de la balise.</p>
+        <p>Ce qui pourrait se lire : "appliquer à toutes les balises
+            &lt;p&gt;&nbsp;l’effet de style décrit entre les accolades".</p>
+        
+        
+        
+        <h3 id="les-sélecteurs-de-classe">Les sélecteurs de classe</h3>
+        <p><a href="https://codepen.io/samuel-gibert/pen/WNZJzXL">https://codepen.io/samuel-gibert/pen/WNZJzXL</a></p>
+        <p>Les&nbsp;sélecteurs de classe&nbsp;CSS permettent de cibler des éléments d'un
+            document en fonction du contenu de l'attribut&nbsp;"class"&nbsp;de chaque élément.
+            Ce sélecteur se distingue par le point "." devant le sélecteur.</p>
+        <p><strong>.</strong>nom_de_la_classe { déclaration(s) de style}</p>
+        <p>Soit un point, suivi du nom que vous voulez attribuer à la classe,
+            suivi de la déclaration de style entre des accolades.</p>
+        <p>Cette définition de classe pourra être utilisée pour n’importe quelle
+            balise du document ou de l’application qui possède l'attribut HTML
+            class="nom_de_la_classe".</p>
+        <p><u>Exemple :</u></p>
+        <table>
+            <colgroup>
+                <col style="width: 51%">
+                <col style="width: 48%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th><strong>HTML</strong></th>
+                    <th><strong>CSS externe</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p class="exemple">
+                            <code>
+&lt;p class= "rouge" &gt; Bienvenue &lt;/p&gt;
+
+On note dans l'exemple que le '.' disparait lorsqu'il est utilisé comme style pour la balise.
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p>
+                    </td>
+                    <td><p class="exemple">
+                            <code>
+.rouge{
+    background-color: red;
+    color:white;
+    font-size: 1.5em;
+}
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><strong>VISUEL</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <div class="image-container"><img src="./TODO supply a title_files/Image11.png" alt=""></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>La même classe peut être appelée plusieurs fois quel que soit la
+            balise HTML sur laquelle elle s'applique. Le sélecteur de class est
+            prioritaire par rapport au sélecteur de type</p>
+        <p>Exemple :</p>
+        <table>
+            <colgroup>
+                <col style="width: 61%">
+                <col style="width: 38%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th><strong>HTML</strong></th>
+                    <th><strong>CSS externe</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p class="exemple">
+                            <code>
+&lt;h1 class="bleue"&gt;Lorem ipsum dolor sit amet&lt;/div&gt;
+&lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;
+&lt;p class="bleue"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+
+On note ici que la class "bleue" est attribué à une balise &lt;h1&gt;
+et &lt;p&gt; ce qui entraine un visuel légèrement différent. Cela
+s'explique du fait que le style externe s'ajoute au style par défaut de
+chacune des balises
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                    <td><p class="exemple">
+                            <code>
+                                
+h1 { /* sélecteur de type */
+    background-color: red;
+    color:white;
+}
+.bleue { /* sélecteur de class */
+    background-color: blue;
+    color:white;
+    font-size: 1.5em;
+}
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><strong>VISUEL</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <div class="image-container"><img src="./TODO supply a title_files/Image12.png" alt=""></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Il existe une autre façon de définir une classe :</p>
+        <p class="exemple">
+            <code>
+nom_balise.nom_de_la_classe 
+{
+    déclaration(s) de style
+}
+            </code>
+            <button class="copy-button"> 
+                <img src="./TODO supply a title_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                <img src="./TODO supply a title_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <p>Soit un nom de balise, suivi d’un point, suivi du nom que vous voulez
+            donner à la classe, suivi de la déclaration de style entre des
+            accolades.</p>
+        <p><u>Exemple :</u></p>
+        <table>
+            <colgroup>
+                <col style="width: 58%">
+                <col style="width: 41%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th><strong>HTML</strong></th>
+                    <th><strong>CSS externe</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p class="exemple">
+                            <code>
+&lt;div class="rouge"&gt; 
+    item 1
+    &lt;blockquote class="rouge"&gt; coucou  &lt;/blockquote&gt;
+&lt;/div&gt;
+
+On note que le style s'est appliqué qu'à la balise &lt;blockquote&gt;
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                    <td><p class="exemple">
+                            <code>
+blockquote.rouge 
+{
+    background-color: red;
+    color:white;
+}
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><strong>VISUEL</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <div class="image-container"><img src="./TODO supply a title_files/Image13.png" alt=""></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Il est possible d'appliquer plusieurs "class" sur une même balise. Il
+            suffit de séparer le nom par un espace.</p>
+        <p><u>Exemple :</u></p>
+        <table>
+            <colgroup>
+                <col style="width: 58%">
+                <col style="width: 41%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th><strong>HTML</strong></th>
+                    <th><strong>CSS externe</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p class="exemple">
+                            <code>
+&lt;p class="rouge souligne"&gt; coucou &lt;/p&gt;
+&lt;h1 class="rouge souligne"&gt; Bienvenue &lt;/h1&gt;
+
+La balise &lt;h1&gt; récupère le style de la class ".souligne" et ".rouge"
+La balise &lt;p&gt; récupère le style de la class ".souligne" et
+".rouge" et comme il s'agit d'une balise &lt;p&gt; le style
+"p.rouge.souligne" s'applique aussi avec un soulignement jaune.
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                    <td><p class="exemple">
+                            <code>
+.souligne
+{
+    text-decoration: underline;
+}
+.rouge 
+{
+    background-color: red;
+    color:white;
+}
+p.rouge.souligne
+{
+    text-decoration-color: yellow;
+}
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><strong>VISUEL</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <div class="image-container"><img src="./TODO supply a title_files/Image14.png" alt=""></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+       
+        <h3 id="les-sélecteurs-didentification">Les sélecteurs
+            d’identification</h3>
+        <p><a href="https://codepen.io/samuel-gibert/pen/PoJeRdd">https://codepen.io/samuel-gibert/pen/PoJeRdd</a></p>
+        <p><strong>L'attribut</strong> id permet d'identifier un élément HTML.
+            Il ne peut y avoir 2 balises HTML avec le même id. Ce point est
+            particulièrement important lorsque nous aborderons le JavaScript.</p>
+        <p>Le <strong>sélecteur</strong> <strong>id</strong>, aussi appelé
+            identifiant id, permet d’appliquer une feuille de style sur l'élément
+            HTML portant cet "id".</p>
+        <p>La définition d’un sélecteur id est :</p>
+        <p class="exemple">
+            <code>
+#nom_de_l’identifiant 
+{   
+    déclaration(s) de style
+}
+            </code>
+            <button class="copy-button"> 
+                <img src="./TODO supply a title_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                <img src="./TODO supply a title_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <p>Soit un dièse (#), suivi du nom que vous voulez donner à
+            l’identifiant id (ou déjà donné à votre balise HTML), suivi de la
+            déclaration de style entre des accolades.</p>
+        <p>Exemple :</p>
+        <table>
+            <colgroup>
+                <col style="width: 58%">
+                <col style="width: 41%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th style="text-align: left;"><strong>HTML</strong></th>
+                    <th style="text-align: left;"><strong>CSS externe</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: left;"><p class="exemple">
+                            <code>
+&lt;p id="rouge"&gt; coucou &lt;/p&gt;
+&lt;p id="rouge"&gt; coucou &lt;/p&gt;
+&lt;p&gt; Bienvenue &lt;/p&gt;
+
+Un identifiant id ne peut figurer qu’une fois dans le document HTML.
+Ainsi, ce qui suit serait incorrect !
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                    <td style="text-align: left;"><p class="exemple">
+                            <code>
+#rouge 
+{
+    background-color: red;
+    color: white;
+}
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><strong>VISUEL</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <div class="image-container">
+                            <img src="./TODO supply a title_files/Image15.png" alt="">
+                            <img src="./TODO supply a title_files/Image16.png" alt="">
+                        </div>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>On peut mélanger les déclarations class et id.</p>
+        <table>
+            <colgroup>
+                <col style="width: 58%">
+                <col style="width: 41%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th style="text-align: left;"><strong>HTML</strong></th>
+                    <th style="text-align: left;"><strong>CSS externe</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: left;"><p class="exemple">
+                            <code>
+&lt;p id="rouge" class="bleu"&gt; coucou &lt;/p&gt;
+&lt;p class="bleu"&gt; coucou &lt;/p&gt;
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                    <td style="text-align: left;"><p class="exemple">
+                            <code>
+#rouge {
+    background-color: red;
+    color: white;
+}
+.bleu{
+    background-color: blue;
+    color: white;
+}
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><strong>VISUEL</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <div class="image-container">
+                            <img src="./TODO supply a title_files/Image17.png" alt="">
+                            <img src="./TODO supply a title_files/Image18.png" alt="">
+                        </div>
+                        <p>Dans la 1ere balise &lt;p&gt; de
+                        l'exemple nous avons un sélecteur de class et un sélecteur
+                        d'identification qui agissent tous 2 sur la propriété background-color.
+                        Dans ce cas-là le sélecteur d'identification est prioritaire, comme
+                        illustré avec F12, et annule les propriétés du sélecteur de class.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Dans ce nouvel exemple la dernière balise combine 2 types de
+            sélecteurs :</p>
+        <table>
+            <colgroup>
+                <col style="width: 58%">
+                <col style="width: 41%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th style="text-align: left;"><strong>HTML</strong></th>
+                    <th style="text-align: left;"><strong>CSS externe</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: left;"><p class="exemple">
+                            <code>
+&lt;p id="rouge" class="taille"&gt; coucou &lt;/p&gt;
+&lt;p class="bleu"&gt; coucou &lt;/p&gt;
+
+Dans le 1<sup>er</sup> &lt;p&gt; nous avons 2 sélecteurs (de class et
+d'identifications) qui ne sont pas en conflit au niveau des propriétés.
+Le style qui est appliqué est la somme du style par défaut, du style de
+l'identificateur, et le style de la class.
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                    <td style="text-align: left;"><p class="exemple">
+                            <code>
+#rouge {
+    background-color: red;
+    color: white; 
+}
+.bleu{
+    background-color: blue;
+    color: white; 
+}
+.taille {
+    font-size: 25px; 
+}
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><strong>VISUEL</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <div class="image-container">
+                            <img src="./TODO supply a title_files/Image19.png" alt="">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Comme pour le sélecteur de class, il existe une autre façon de
+            définir un sélecteur d'identification</p>
+        <p class="exemple">
+            <code>
+nom_balise#nom_de_l’identifiant {
+    déclaration(s) de style
+}
+        
+            </code>
+            <button class="copy-button"> 
+                <img src="./TODO supply a title_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                <img src="./TODO supply a title_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <p>Soit un nom de balise, suivi d’un dièse (#), suivi du nom que vous
+            voulez donner à l’identifiant, suivi de la déclaration de style entre
+            des accolades.</p>
+        <p><u>Exemple :</u></p>
+        <table>
+            <colgroup>
+                <col style="width: 58%">
+                <col style="width: 41%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th style="text-align: left;"><strong>HTML</strong></th>
+                    <th style="text-align: left;"><strong>CSS externe</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: left;"><p class="exemple">
+                            <code>
+&lt;p id="rouge"&gt; coucou &lt;/p&gt;
+&lt;h1 id="rouge"&gt;essai&lt;/h1&gt;
+
+Attention comme expliqué précédemment un identifiant id doit être
+unique. Cet exemple est donc incorrect !
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                    <td style="text-align: left;"><p class="exemple">
+                            <code>
+p#rouge {
+    background-color: red;
+    color: white;
+}
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><strong>VISUEL</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <div class="image-container">
+                            <img src="./TODO supply a title_files/Image20.png" alt="">
+                        </div>
+                        <p>Le style c'est correctement
+                        appliqué qu'a la seule balise &lt;p&gt; possédant l'identifiant
+                        rouge.</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <p><img src="./TODO supply a title_files/Image13(1).png" style="width:0.30069in;height:0.25486in" alt="Une image contenant texte, clipart Description générée automatiquement"></p>
+        <h3 id="sélecteur-multiple">Sélecteur multiple</h3>
+        <p><a href="https://codepen.io/samuel-gibert/pen/eYGrrgg">https://codepen.io/samuel-gibert/pen/eYGrrgg</a></p>
+        <p>On peut désigner plusieurs objets pour y appliquer le même style.
+            Dans ce cas, chacune des balises concernées devra être séparée par une
+            virgule.</p>
+        <p><u>Exemple 1</u> :</p>
+        <p class="exemple">
+            <code>
+h1,h2,h3 { 
+    déclaration de styles
+}
+            </code>
+            <button class="copy-button"> 
+                <img src="./TODO supply a title_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                <img src="./TODO supply a title_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <p>Ce qui signifie que les
+            balises&nbsp;&lt;h1&gt;,&nbsp;&lt;h2&gt;&nbsp;et&nbsp;&lt;h3&gt;&nbsp;auront le même effet de
+            style décrit entre les accolades.</p>
+        <p><u>Exemple 2</u> : On applique ici le même style aux éléments h1 et
+            aux balises div de classe "contenu"</p>
+        <p class="exemple">
+            <code>
+h1, div.contenu{
+    color:blue;
+    background-color:white;
+}</code>
+            <button class="copy-button"> 
+                <img src="./TODO supply a title_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                <img src="./TODO supply a title_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p> <h2 id="notions-de-cascade">Notions de cascade</h2>
+        <p>Comme vu en début de ce cours, l'intégration du CSS peut se faire à 3
+            niveaux différents :</p>
+        <ul>
+            <li><p>En ligne : directement dans une balise HTML</p></li>
+            <li><p>En interne : Dans une balise &lt;style&gt; contenu dans le
+                    &lt;head&gt;</p></li>
+            <li><p>En externe : dans un fichier .css utilisé avec
+                    &lt;link&gt;</p></li>
+        </ul>
+        <p>Nous l'avons déjà vu, il peut se produire des conflits entre les
+            différentes spécifications de style. Supposons le cas suivant :</p>
+        <table>
+            <colgroup>
+                <col style="width: 50%">
+                <col style="width: 49%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th><strong>HTML</strong></th>
+                    <th style="text-align: left;"><strong>CSS externe</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p class="exemple">
+                            <code>
+&lt;style&gt;
+    h1 {
+        text-decoration: underline;
+        color: blueviolet; 
+    }
+&lt;/style&gt;
+...
+&lt;h1&gt; coucou &lt;/h1&gt;
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                    <td style="text-align: left;"><p class="exemple">
+                            <code>
+h1 {
+    text-decoration: overline;
+    color: green;
+}
+2 sélecteurs de type h1 sont définis en interne et dans un fichier css externe
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><strong>VISUEL</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <div class="image-container">
+                            <img src="./TODO supply a title_files/Image21.png" alt="">
+                        </div>
+                        <p>En cas de conflit entre une
+                        spécification de style externe et interne, c’est la spécification de la
+                        feuille de style interne qui sera retenue par le navigateur </p></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Il en est de même, en cas de conflit entre une feuille de style
+            interne et en ligne, c’est cette dernière qui l’emportera. L'ordre de
+            priorité de la plus basse à la plus haute :</p>
+        <ul>
+            <li><p>Les feuilles de style externes.</p></li>
+            <li><p>Les feuilles de style internes.</p></li>
+            <li><p>Les feuilles de style en ligne.</p></li>
+        </ul>
+        <p>Une directive permet de modifier cette priorité :
+            <strong>!important</strong> et <strong>!veryimportant</strong></p>
+        <table>
+            <colgroup>
+                <col style="width: 40%">
+                <col style="width: 59%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th><strong>HTML</strong></th>
+                    <th style="text-align: left;"><strong>CSS externe</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p class="exemple">
+                            <code>
+&lt;style&gt;
+    h1 {
+        text-decoration: underline;
+        color: blueviolet; 
+    }
+&lt;/style&gt;
+    ...
+&lt;h1&gt; coucou &lt;/h1&gt;
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                    <td style="text-align: left;"><p class="exemple">
+                            <code>
+h1 {
+    text-decoration: overline !important;
+    color: green !important;
+}
+                            </code>
+                            <button class="copy-button"> 
+                                <img src="./TODO supply a title_files/copier.png" alt="">
+                                <span>Copier le code</span> 
+                            </button>
+                            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                                <img src="./TODO supply a title_files/codePen.png" alt="">
+                                <span> Run</span>
+                            </a>
+                        </p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><strong>VISUEL</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        <div class="image-container">
+                            <img src="./TODO supply a title_files/Image22.png" alt="">
+                        </div>
+                        <p>Maintenant que la directive
+                        !important est ajouté dans le CSS externe nous avons le visuel suivant.
+                        C'est le style externe qui vient d'être appliqué</p></td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="une-image-contenant-texte-clipart-description-générée-automatiquementla-notion-dheritage">La
+            notion d'heritage</h2>
+        <p><a href="https://codepen.io/samuel-gibert/pen/MWEGXZz">https://codepen.io/samuel-gibert/pen/MWEGXZz</a></p>
+        <p>Soit le code HTML suivant et son visuel</p>
+        
+        <p class="exemple">
+            <code>
+&lt;b&gt;Une phrase en gras, <strong>(1)</strong> 
+    &lt;i&gt;avec des parties en italique et <strong>(2)</strong> 
+        &lt;code&gt;du code&lt;/code&gt; <strong>(3)</strong>
+    &lt;/i&gt;
+&lt;/b&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./TODO supply a title_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                <img src="./TODO supply a title_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+        <div class="image-container">
+            <img src="./TODO supply a title_files/Image23.png" alt="">
+        </div>
+        
+        
+        <p>
+        Le HTML est basé sur le
+            modèle PARENT-ENFANTS. Toutes balises à forcément un parent hormis la
+            balise &lt;html&gt; qui est la balise de plus haut niveau. Une balise
+            peut contenir des ENFANTS. C'est le cas dans cette exemple où la balise
+            &lt;code&gt; à un parent &lt;i&gt; qui a lui-même un parent &lt;b&gt;,
+            ayant lui-même un parent &lt;body&gt;, ayant un parent &lt;html&gt;
+            comme illustré.
+        </p>
+        
+        <div class="image-container">
+            <img src="./TODO supply a title_files/Image24.png" alt="">
+            <img src="./TODO supply a title_files/Image25.png" alt="">
+        </div>
+        
+        <p>Ce modèle PARENT-ENFANTS
+            entraine le principe d'héritage en CSS : <strong>chaque élément Enfant
+                reçoit (DANS LA PLUPART DES CAS<sup>*</sup>) en héritage tous les styles
+                (définies ou par défaut) de son élément Parent.</strong></p>
+        <p>D’où le nom CSS = <strong>C</strong>ascading <strong>S</strong>tyle
+            <strong>S</strong>heets</p>
+        <p>En inspectant la balise &lt;code&gt; de l'exemple précédent nous
+            avons le style comme illustré :</p>
+        <p>Le texte de la balise &lt;code&gt; sera avec une police de caractère
+            "monospance" (son style par défaut), et hérite
+            (<strong>Inherited</strong>) aussi de la balise &lt;i&gt;, donc en
+            italique (italic) , et hérite aussi de la balise &lt;b&gt; donc en gras
+            (bold).</p>
+        
+        <div class="image-container">
+            <img src="./TODO supply a title_files/Image26.png" alt="">
+        </div>
+        <p>On peut aussi le lire : le style de &lt;b&gt; se propage en
+            <strong>cascade</strong> sur ses enfants. Donc le style de &lt;b&gt;
+            s'applique aussi à son enfant &lt;i&gt; qui se propage en cascade sur
+            son enfant &lt;code&gt;</p>
+        <p><strong><sup>*</sup>DANS
+                PLUPART DES CAS !! :</strong> certaines propriétés CSS ne sont pas
+            héritable et ne se transmette pas du PARENT vers l'ENFANT. Prenons le
+            cas de la propriété width : <a href="https://developer.mozilla.org/fr/docs/Web/CSS/width">https://developer.mozilla.org/fr/docs/Web/CSS/width</a>.</p>
+        <p>Celle-ci n'est pas héritable.</p>
+        <div class="image-container">
+            <img src="./TODO supply a title_files/Image27.png" alt="">
+        </div>
+         <p>Si l'on applique le style suivant à la balise html nous obtenons le visuel
+            suivant</p>
+          <div class="image-container">
+            <img src="./TODO supply a title_files/Image28.png" alt="">
+        </div>
+         <p class="exemple">
+             <code>           
+&lt;style&gt;
+    html{
+        color:brown;W
+    }
+&lt;/style&gt;
+Et à l'inspection de la balise &lt;code&gt;
+             </code>
+             <button class="copy-button"> 
+                 <img src="./TODO supply a title_files/copier.png" alt="">
+                 <span>Copier le code</span> 
+             </button>
+             <a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_css.html" target="_blank" class="run-button">
+                 <img src="./TODO supply a title_files/codePen.png" alt="">
+                 <span> Run</span>
+             </a>
+         </p>
+        <p><strong><u>Conclusion</u></strong> : les balises enfants hérite des
+            propriétés de style du parent.</p>
+        
+        <div class="image-container">
+            <img src="./TODO supply a title_files/Image29.png" alt=""> 
+        </div>
+        <p><u>Remarque
+                :</u> toute balise ne peut-être ENFANT de n'importe quel PARENT. Cela
+            est spécifié dans le langage HTML. Par exemple il n'est pas possible de
+            mettre une balise &lt;p&gt; dans une balise &lt;h1&gt;.</p>
+        <p>Par exemple la balise &lt;h1&gt; appartient à la catégorie de contenu
+            FLUX (voir copie d'écran). Cette balise accepte d'autres balises de type
+            phrasé uniquement.</p>
+        <p>Comme la balise &lt;p&gt; est une balise de type FLUX il n'est pas
+            possible de l'imbriquer dans une balise &lt;h1&gt; et l'inverse et
+            également vrai. Pour plus d'information ce site permet de savoir ce qui
+            est autorisé voir le lien ci-dessous <a href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Content_categories" target="_blank">https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Content_categories</a></p>
+                <div class="image-container">
+            <img src="./TODO supply a title_files/Image30.png" alt="">
+        </div>
+        <p>Il existe un outil permettant de contrôler votre code : W3C validator
+            : <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org</a>. Ici
+            l'erreur est expliquée :</p>
+        <div class="image-container">
+            <img src="./TODO supply a title_files/Image31.png" alt="">
+        </div>
+        <h2 id="les-unites-de-mesures">Les unites de mesures</h2>
+        <p>De nombreuses unités de mesure sont utilisés. Elles s'expriment en
+            pouces (inches), en centimètres, en millimètres, en points, en picas, en
+            pixels et en pourcentage.</p>
+        <p>On distingue les valeurs relatives qui peuvent varier selon
+            l’ordinateur utilisé et les valeurs absolues qui restent constantes</p>
+        <p><strong>Les valeurs absolues : <a href="https://www.w3.org/Style/Examples/007/units.fr.html">https://www.w3.org/Style/Examples/007/units.fr.html</a></strong></p>
+        <table>
+            <colgroup>
+                <col style="width: 17%">
+                <col style="width: 14%">
+                <col style="width: 28%">
+                <col style="width: 19%">
+                <col style="width: 20%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Unité</th>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Valeur</th>
+                    <th>Exemple</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>pt</td>
+                    <td>point</td>
+                    <td>72 pt = 1 inch</td>
+                    <td>entier</td>
+                    <td>48pt</td>
+                </tr>
+                <tr>
+                    <td>pc</td>
+                    <td>pica</td>
+                    <td>1 pc = 12 pt</td>
+                    <td>réel</td>
+                    <td>4.5pc</td>
+                </tr>
+                <tr>
+                    <td>mm</td>
+                    <td>millimètre</td>
+                    <td>1 mm = .24 pc</td>
+                    <td>entier</td>
+                    <td>60mm</td>
+                </tr>
+                <tr>
+                    <td>cm</td>
+                    <td>centimètre</td>
+                    <td>1 cm = 10 mm</td>
+                    <td>entier</td>
+                    <td>6cm</td>
+                </tr>
+                <tr>
+                    <td>in</td>
+                    <td>inch</td>
+                    <td>1 in = 2.54 cm</td>
+                    <td>réel</td>
+                    <td>0.1in</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Les valeurs relatives :</strong></p>
+        <table>
+            <colgroup>
+                <col style="width: 11%">
+                <col style="width: 61%">
+                <col style="width: 10%">
+                <col style="width: 16%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Unité</th>
+                    <th>Description</th>
+                    <th>Valeur</th>
+                    <th>Exemple</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>em</td>
+                    <td>Unité relative se basant sur la taille de police par défaut de la
+                        page.</td>
+                    <td>réel</td>
+                    <td>1.8em</td>
+                </tr>
+                <tr>
+                    <td>ex</td>
+                    <td>Unité relative à la hauteur de la minuscule de l’élément
+                        sélectionné.</td>
+                    <td>réel</td>
+                    <td>1.3ex</td>
+                </tr>
+                <tr>
+                    <td>px</td>
+                    <td>Le pixel est la plus petite partie d’une image. Dépend de la
+                        résolution d’écran.</td>
+                    <td>entier</td>
+                    <td>220px</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Pourcentage</td>
+                    <td>entier</td>
+                    <td>80%</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 id="les-couleurs">Les couleurs</h2>
+        <p>Les feuilles de style CSS proposent de multiples notations pour
+            déclarer une couleur. Soit :</p>
+        <ul>
+            <li><p>La notation hexadécimale classique soit #rrggbb avec trois
+                    composantes (RGB): rouge, vert et bleu</p></li>
+            <li><p>La notation hexadécimale abrégée soit #rgb. Chaque chiffre est
+                    dupliqué. Par exemple, #fd3 correspond à la notation classique #ffdd33.
+                    On ne pourra pas abréger une couleur comme #cfe4f5.</p></li>
+            <li><p>La notation décimale. Par exemple, color: rgb(0, 0, 255). 255
+                    correspond ici à la valeur hexa FF</p></li>
+            <li><p>La notation en pourcentage. Par exemple, color: rgb(25%, 50%,
+                    0%). La valeur 0% signifie l’absence de la composante, 100% qu’elle est
+                    à son maximum.</p></li>
+            <li><p>Les mots-clés soit, par exemple, color: red.</p></li>
+        </ul>
+        <p>À ces notations, le CSS3 a ajouté :</p>
+        <ul>
+            <li><p>La notation RGBa. Une composante en plus. Cela devient donc
+                    rgba(0,0,0,0). La dernière valeur indiquant le degré d’opacité ou de
+                    transparence entre 0 et 1.</p></li>
+        </ul>
+
+
+
+
+
+        <script>  generateToc('toc', ['h2']);</script>
+    
+
+</body></html>

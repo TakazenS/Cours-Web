@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Cours HTML - 1</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./Cours HTML - 1_files/monCSS.css" rel="stylesheet" type="text/css">
+        <script src="./Cours HTML - 1_files/script.js.téléchargement" type="text/javascript"></script>
+
+    </head>
+    <body class="p">
+        <div class="popup" id="popup" onclick="closePopup()">
+            <img id="popupImage" alt="Popup Image">
+        </div>        
+
+        <div id="toc"><a href="https://samuelgibert.github.io/index.html"> <h4>⌂ go home</h4> </a><br><strong>Sommaire :</strong><ul><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html#historique-des-versions">Historique des versions</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html#qu%E2%80%99est-ce-que-le-html-?">Qu’est-ce que le HTML&nbsp;?</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html#la-notion-de-web-s%C3%A9mantique">La notion de web sémantique</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html#g%C3%A9n%C3%A9ralit%C3%A9s-sur-l%E2%80%99aspect-du-code">Généralités sur l’aspect du code</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html#le-doctype">Le Doctype</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html#la-balise-%3Chtml%3E">La balise &lt;html&gt;</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html#l%E2%80%99%C3%A9l%C3%A9ment-%3Chead%3E-:-l%E2%80%99en-tete">L’élément &lt;head&gt;&nbsp;: l’En-tete</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html#la-balise-%3Cbody%3E">La balise &lt;body&gt;</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html#-les-commentaires-"> Les commentaires </a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html#les-balises-conteneurs-textes">Les balises Conteneurs textes</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html#les-paragraphes-la-balise-p">Les paragraphes : la balise &lt;P&gt;</a></li><li><a href="https://samuelgibert.github.io/coursHTML/public_html/cours_1_html.html#-la-mise-en-forme-du-texte"> La mise en forme du texte</a></li></ul></div>
+        <h1>HTML 5 – Partie 1</h1>
+
+        <section id="historique-des-versions">
+        <h2 id="historique-des-versions">Historique des versions</h2>
+        <p>Le HTML 5(octobre 2014) puis HTML 5.1 (octobre 2017) succède à HTML
+            4.1(décembre 1999), qui lui-même succède à la version 4(avril 1998).</p>
+        <p>L’objectif du cours n’est pas de faire un comparatif entre les
+            différentes versions.</p>
+        <p>Le W3C (World Wide Web Consortium) est un organisme international qui
+            développe des standards pour le Web. Actuellement, de nombreux standards
+            sont élaborés par cet organisme&nbsp;: XML, CSS, SVG… et HTML.</p>
+        <p>Le W3C travaille sur le mandat de ses&nbsp;membres parmi lesquelles se
+            trouvent les grands noms de l’informatique&nbsp;: Google, Mozilla, Microsoft,
+            HP, Cisco ….</p>
+        <p>En clair&nbsp;: aucune technologie n’obtient le cachet de W3C sans être
+            approuvée par la communauté du Web.</p>
+        <p>Les&nbsp;membres&nbsp;délèguent des ingénieurs au sein de W3C et participent
+            ainsi à l’élaboration des spécifications techniques pour les
+            technologies du Web.</p>
+        <p>Le HTML 5 et tous les autres standards sont issus de ce travail.</p>
+        <p>Ainsi une page WEB écrite en HTML 5, qui respecte les recommandations
+            du W3C sera interprétée de la même façon, quel que soit le navigateur
+            (chrome, IE, Edge, Firefox, Safari, Opera…)</p>
+        <p>Le W3C propose le service Markup Validation Service à l’adresse&nbsp;: <a href="https://validator.w3.org/">https://validator.w3.org</a>. Ce service
+            permet de vérifier que le code HTML d’une page respecte le standard.</p>
+        <p>Le W3C recommande HTML5 depuis 2014.</p>
+        
+        </section>
+        <section id="quest-ce-que-le-html">
+        <h2 id="qu%E2%80%99est-ce-que-le-html-?">Qu’est-ce que le HTML&nbsp;?</h2>
+        <p><strong>HTML</strong> signifie <strong><u>H</u></strong>yper
+            <strong><u>T</u></strong>ext <strong><u>M</u></strong>arkup
+            <strong><u>L</u></strong>anguage&nbsp;: Langage de balisage d’hypertexte</p>
+        <p>Permet de définir des documents Web, reliés entre eux par des liens,
+            contenants&nbsp;:</p>
+        <ul>
+            <li><p>Du texte</p></li>
+            <li><p>Des images</p></li>
+            <li><p>Du son, des vidéos</p></li>
+        </ul>
+        <p>C’est un langage de description de documents. Il n’a pas pour
+            objectif la mise en forme des documents. Ce qui permet la mise en forme
+            d’un document c’est le CSS que nous étudierons plus tard dans ce
+            cours.</p>
+        <p><strong><u>Conclusion&nbsp;:</u></strong> on utilise <strong>HTML</strong>
+            pour décrire le <u>fond</u>, et <strong>CSS</strong> pour la
+            <u>forme</u>.</p>
+        </section>
+        <section id="la-notion-de-web-sémantique">
+        <h2 id="la-notion-de-web-s%C3%A9mantique">La notion de web sémantique</h2>
+        <p>Les pages Web que nous rédigeons sont destinées à être lues par des
+            humains, non par des machines. Néanmoins des ordinateurs spécialisés
+            sont chargés d’analyser les pages Web dans l’objectif de les référencer.
+            C’est le cas des moteurs de recherche comme Google. Pour analyser vos
+            pages, ses derniers doivent comprendre le sens du contenu.</p>
+        <p><u>Définition Wikipédia</u> : le Web sémantique est un système qui
+            permet aux machines de «&nbsp;comprendre&nbsp;» et de répondre aux demandes
+            complexes de l’homme en fonction du sens de ces demandes. Une telle
+            «&nbsp;compréhension&nbsp;» exige que les sources d’information pertinentes aient
+            été sémantiquement structurées au préalable.</p>
+        <p><u>Autre définition Wikipédia</u> : L’optimisation pour les moteurs
+            de recherche, où&nbsp;SEO&nbsp;(pour&nbsp;search engine optimization) est un ensemble
+            de techniques pour optimiser la visibilité d’une&nbsp;page Web&nbsp;dans les pages
+            de résultats de recherche. Ces techniques cherchent à améliorer la
+            compréhension par les&nbsp;robots d’indexation&nbsp;de la thématique et du contenu
+            d’une ou de l’ensemble des&nbsp;pages d’un site Web&nbsp;et à augmenter le trafic
+            naturel du site.</p>
+        <p>L’objectif est d’améliorer le positionnement d’une page Web dans les
+            pages de résultats de recherche sur des&nbsp;mots-clés&nbsp;ciblés (selon les
+            thèmes principaux du site). On considère que le positionnement d’un site
+            est bon lorsqu’il est positionné (classé) dans la première page des
+            résultats de recherche, dans l’une des dix premières réponses naturelles
+            d’une recherche sur des mots-clés correspondant précisément à sa
+            thématique.</p>
+
+        <p>Exemple avec les balises de h1 à h6 :</p>
+        <p class="exemple">
+            <code>
+&lt;h1&gt; titre 1 &lt;/h1&gt;
+&lt;h2&gt; titre 2 &lt;/h2&gt; 
+&lt;h3&gt; titre 3 &lt;/h3&gt;
+&lt;h4&gt; titre 4 &lt;/h4&gt;
+&lt;h5&gt; titre 5 &lt;/h5&gt;
+&lt;h6&gt; titre 6 &lt;/h6&gt;</code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+        </p>
+
+        <p>Visuellement nous voyons que la balise h1 affiche du texte en "plus
+            gros" que la balise h2. Mais attention le HTML n’est pas fait pour
+            mettre en forme. Ce n’est pas ici le but. Ici l’objectif principal est
+            de définir la sémantique (donner du sens) de vos pages pour les moteurs
+            de recherche.</p>
+        <p>Avec la balise h1 nous indiquons juste au moteur de recherche que le
+            texte entre balises h1 est un texte très important.</p>
+        <h3 id="ce-quil-nest-pas">Ce qu’il n’est pas</h3>
+        <p>HTML n’est pas un langage de programmation. Il ne permet pas de faire
+            des traitements, et n’offre pas les instructions classiques de
+            déclaration, d’affectation de variables, de boucles, de tests
+            SI…ALORS..SINON…etc.</p>
+        <p>Pour ‘programmer’ une page Web, il faudra utiliser un langage comme
+            JavaScript, PHP ou java par exemple.</p>
+        </section>
+        <section id="généralités-sur-laspect-du-code">
+        <h2 id="g%C3%A9n%C3%A9ralit%C3%A9s-sur-l%E2%80%99aspect-du-code">Généralités sur l’aspect du code</h2>
+        <ol type="1">
+            <li><p>En HTML5, les balises ne sont pas sensibles à la casse. L’usage
+                    s’est généralisé d’écrire les balises en minuscules. On peut donc écrire
+                    les balises ainsi&nbsp;:
+                    &lt;BALISE&gt;,&nbsp;&lt;Balise&gt;&nbsp;ou&nbsp;<strong>&lt;balise&gt;.</strong></p></li>
+            <li><p>Toute balise ouverte&nbsp;&lt;balise&gt;&nbsp;doit être fermée
+                    par&nbsp;&lt;/balise&gt;, mis à part les balises dites orpheline</p></li>
+            <li><p>Les balises doivent être correctement imbriquées. Lorsqu’on
+                    affecte plusieurs balises à un élément, l’ordre de fermeture de
+                    celles-ci est essentiel. La première balise de fermeture doit
+                    correspondre à la dernière balise d’ouverture non fermée.</p></li>
+        </ol>
+        <p>Exemple&nbsp;:</p>
+        <p class="exemple">
+            <code>
+Est correct:&nbsp;&lt;a&gt;&lt;b&gt;&lt;c&gt;contenu&lt;/c&gt;&lt;/b&gt;&lt;/a&gt;.
+Est incorrect:&nbsp;&lt;a&gt;&lt;b&gt;&lt;c&gt;contenu&lt;/a&gt;&lt;/c&gt;&lt;/b&gt;.
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+        </p>
+        <blockquote>
+
+        </blockquote>
+        <ol start="4" type="1">
+            <li><p>Les valeurs des attributs doivent toujours figurer entre des "guillemets".</p></li>
+        </ol>
+        <p>Exemple&nbsp;: ici <strong>lang</strong> est l’attribut,
+            "<strong>fr</strong>" sa valeur.</p>
+        <p class="exemple">
+            <code>
+&lt;html lang=<strong>"fr"</strong>&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+
+        </p>
+
+        <ol start="5" type="1">
+            <li><p>Un code doit être indenté pour être lisible. L’indentation
+                    consiste à ajouter les tabulations de façon à marquer qu’une balise HTML
+                    dépend de la balise précédente. Sauter des lignes dans le code favorise
+                    la lecture de celui-ci.</p></li>
+        </ol>
+        </section>
+        <section id="doctype">
+        <h2 id="le-doctype">Le Doctype</h2>
+        <p>Le&nbsp;<strong>doctype</strong>, littéralement «&nbsp;type de document&nbsp;» est
+            une&nbsp;instruction&nbsp;placée au début des pages HTML.</p>
+        <p>Cette instruction spécifie le DTD (<strong><u>D</u></strong>ocument
+            <strong><u>T</u></strong>ype
+            <strong>D</strong>efinition<strong>)</strong> utilisé. Le DTD définit
+            comment les balises HTML sont formées. Par exemple le DTD définit si une
+            balise peut inclure une autre balise ou non, si oui lesquelles, il
+            définit aussi les attributs utilisables dans une balise, etc. … Le DTD
+            est indispensable aux validateurs&nbsp;comme celui du&nbsp;W3C, qui en ont besoin
+            pour savoir à quelles règles le document il est supposé obéir. Le
+            validateur est disponible à cette URL&nbsp;: <a href="http://validator.w3.org/">http://validator.w3.org/</a></p>
+        <p>Le doctype indique au navigateur la version HTML utilisée, ce qui va
+            permettre à ce dernier d’interpréter correctement le document, notamment
+            au niveau du rendu.</p>
+        
+        
+        <h3 id="en-html-5">En HTML 5</h3>
+        <p>Les choses ont été grandement simplifiées concernant le doctype. Il
+            faut ajouter la ligne suivante en début de page&nbsp;:</p>
+        <p class="exemple">
+            <code>
+&lt;!DOCTYPE&nbsp;html&gt;</code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+        </p>
+        <p>Dans les versions précédentes, il fallait ajouter la ligne</p>
+        <ul>
+            <li><p>HTML 4.01 strict&nbsp;:</p></li>
+        </ul>
+        <p class="exemple">
+            <code>
+&lt;!DOCTYPE&nbsp;HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button> 
+        </p>
+        <ul>
+            <li><p>HTML 4.01 Transitional&nbsp;:</p></li>
+        </ul>
+        <p class="exemple">
+            <code>
+&lt;!DOCTYPE&nbsp;HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+        </p>
+        <p>De quoi s’y perdre un peu.</p>
+        <h3 id="le-doctype-est-ce-vraiment-important">Le Doctype&nbsp;? Est-ce
+            vraiment important&nbsp;?</h3>
+        <p>Certains navigateurs (Mozilla
+            Firefox par exemple) permettent d’obtenir les informations concernant
+            une page Web. Dans l’écran affiché, une ligne nous intéresse&nbsp;: "le mode
+            de rendu". Dans le cas où le doctype est renseigné, nous aurons la
+            valeur <strong>"Mode de respect des standards".</strong> Dans le cas
+            contraire, nous aurons la valeur <strong>"Mode de compatibilité (quirks)"</strong>.
+        </p>
+        <div class="image-container">
+            <img src="./Cours HTML - 1_files/html1_Image0.png" alt="" onclick="openPopup(this)">
+            <img src="./Cours HTML - 1_files/html1_Image1.png" alt="" onclick="openPopup(this)">
+            <img src="./Cours HTML - 1_files/html1_Image2.png" alt="" onclick="openPopup(this)">
+        </div>
+
+        <p>En l’absence d’un doctype, le navigateur ignore selon quelles règles
+            il doit traiter la page. Il se rabat ainsi sur des procédures qui lui
+            sont propres pour afficher coute que coute votre page HTML. Ce qui peut
+            entrainer des différences de restitution sensibles entre les différents
+            navigateurs. Ce mode bancal est appelé mode compatibilité
+            ou&nbsp;<strong>quirks</strong> mode.</p>
+        </section>
+        <section id="la-balise-html">
+        <h2 id="la-balise-%3Chtml%3E">La balise &lt;html&gt;</h2>
+        <p>La balise&nbsp;<strong>&lt;html&gt;</strong>&nbsp;indique au navigateur qu’il s’agit d’un
+            document HTML.</p>
+        <p>La balise&nbsp;<strong>&lt;html&gt;</strong>&nbsp;est l’élément le plus haut ou l’élément racine
+            du document. Elle prend donc place juste après la déclaration de
+            doctype.</p>
+        <p class="exemple">
+            <code>
+&lt;! DOCTYPE html&gt;
+&lt;html lang=<strong>"fr"</strong>&gt;
+<strong>... </strong>
+&lt;/html&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+        </p>
+        <p>La balise&nbsp;&lt;html&gt;&nbsp;peut prendre comme attribut&nbsp;lang="fr"&nbsp;qui
+            spécifie que le document est en langue française. Cette information est
+            utilisée par les moteurs de recherche comme Google.</p>
+        <p>À l’adresse&nbsp;<a href="http://www.w3schools.com/">www.w3schools.com</a>,
+            vous pouvez trouver une liste complète des autres langues référencées.
+            Ce site doit être un site de référence pour l’apprentissage du html.</p>
+        
+        </section>
+        <section id="lélément-head-len-tete">
+        <h2 id="l%E2%80%99%C3%A9l%C3%A9ment-%3Chead%3E-:-l%E2%80%99en-tete">L’élément &lt;head&gt;&nbsp;: l’En-tete</h2>
+        <p>La balise&nbsp;&lt;head&gt;... &lt;/head&gt;&nbsp;qui se positionne juste après
+            le doctype et la balise&nbsp;&lt;html&gt;&nbsp;contient ce qu’on appelle l’en-tête
+            du document. Dans cet en-tête du document se situe toute une série
+            d’informations relatives au document lui-même, indépendamment du contenu
+            de celui-ci.</p>
+        <p>Ces informations peuvent être de natures très diverses&nbsp;:</p>
+        <ul>
+            <li><p>Le titre du document. Soit la balise&nbsp;&lt;title&gt;...
+                    &lt;title&gt;&nbsp;reprise au point suivant.&nbsp;</p></li>
+            <li><p>Des déclarations ou des appels de feuilles de style CSS.</p></li>
+            <li><p>Des fonctions ou des liens vers des fichiers JavaScript.</p></li>
+        </ul>
+        <ul>
+            <li><p>Des informations à l’intention des moteurs de recherche pour le
+                    référencement de la page.</p></li>
+            <li><p>Des informations à l’intention des navigateurs.</p></li>
+            <li><p>Des balises méta qui reprendront quant à elles l’encodage, la
+                    description de la page, les mots-clés associés à la page, le nom de
+                    l’auteur, des mentions de copyright, etc.</p></li>
+        </ul>
+        <p>Dans un souci de simplification, le HTML5 spécifie des valeurs par
+            défaut pour l’attribut type des scripts, des styles et les
+            éléments&nbsp;link. Sauf si vous avez expressément besoin d’une valeur
+            différente que celles définies par défaut, vous pouvez omettre en HTML5
+            cet attribut de type.</p>
+        <p>Le JavaScript est défini comme langage de script par défaut.</p>
+        <p>Ainsi, en HTML 4.0, on devait écrire&nbsp;:</p>
+        <p class="exemple">
+            <code>
+&lt;script type="text/javascript"&gt;&nbsp;...&nbsp;&lt;/script&gt;
+&lt;script type="text/javascript" src="fichier.js"&gt;&lt;/script&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+        </p>
+        <p>En HTML5, on peut se contenter de&nbsp;: (javascript est ici le langage
+            par défaut)</p>
+        <p class="exemple">
+            <code>
+&lt;script&gt;&nbsp;...&nbsp; &lt;/script&gt;
+&lt;script src="fichier"&gt;&lt;/script&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+        </p>
+        <p>De même pour le CSS&nbsp;: c’est le langage de feuilles de style par
+            défaut.</p>
+        <p>Ainsi, en HTML 4.0, on devait écrire&nbsp;:</p>
+        <p class="exemple">
+            <code>
+&lt;style type="text/css"&gt;&nbsp;...&nbsp;&lt;/style&gt;
+&lt;link rel="stylesheet" type="text/css" href="fichier.css"&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+        </p>
+        <p>En HTML5, on peut se contenter de&nbsp;:</p>
+        <p class="exemple">
+            <code>
+&lt;style&gt;...&lt;/style&gt;
+&lt;link rel="stylesheet" href="fichier.css"&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+        </p>
+        <p>Notre document minimal HTML5 devient&nbsp;:</p>
+        <p class="exemple">
+            <code>
+&lt;! DOCTYPE html&gt;&nbsp;
+&lt;html lang="fr"&gt;&nbsp;
+    &lt;head&gt;&nbsp;
+        ...&nbsp;
+    &lt;/head&gt;&nbsp;
+    ...&nbsp;
+&lt;/html&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button> 
+        </p>
+        <p>Mis à part le titre de la page (voir ci-après), aucun élément compris entre
+            les balises&nbsp;&lt;head&gt;... &lt;/head&gt;&nbsp;n’apparais pas dans le navigateur.</p>
+        <h3 id="la-balise-title">La balise &lt;title&gt; </h3>
+        <p> <a href="https://codepen.io/samuel-gibert/pen/oNGoYwG">https://codepen.io/samuel-gibert/pen/oNGoYwG</a></p>
+        <p>La balise&nbsp;<strong>&lt;title&gt;</strong>, incluse dans l’en-tête du document, est la
+            seule balise obligatoire de celui-ci.</p>
+        <p>La balise&nbsp;<strong>&lt;title&gt;</strong>... <strong>&lt;/title&gt;</strong>&nbsp;donne un titre à votre page.</p>
+        <p>Ce titre est affiché dans la barre de titre, située en haut à gauche
+            de tout navigateur et/ou dans les onglets ouverts par celui-ci.</p>
+        <p>La balise&nbsp;<strong>&lt;title&gt;</strong>&nbsp;a une place importante dans l’algorithme de
+            référencement de Google. On veillera à avoir pour les documents Web, un
+            titre accrocheur et synthétique.</p>
+        <p>Attention s’il y a une erreur dans cette balise par exemple
+            :&nbsp;<strong>&lt;title&gt;... &lt;title&gt;</strong> une simple page blanche est affichée.
+            Ici la balise est mal refermée&nbsp;: &lt;title&gt;... &lt;/title&gt;</p>
+        
+        <p class="exemple">
+            <code>
+&lt;title&gt; Exemple Titre hx &lt;/title&gt;
+
+&lt;h1&gt;Titre1 &lt;/h1&gt;
+&lt;h2&gt;Titre2 &lt;/h2&gt;
+&lt;h3&gt;Titre3 &lt;/h3&gt;
+&lt;h4&gt;Titre4 &lt;/h4&gt;
+&lt;h5&gt;Titre5 &lt;/h5&gt;
+&lt;h6&gt;Titre6 &lt;/h6&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+            <a href="https://codepen.io/samuel-gibert/pen/oNGoYwG" target="_blank" class="run-button">
+                <img src="./Cours HTML - 1_files/codePen.png" alt="">
+                <span> Run</span>
+            </a>
+        </p>
+ 
+
+        <h3 id="lencodage-des-caractères">L’encodage des caractères</h3>
+        <p><a href="https://codepen.io/samuel-gibert/pen/oNGobqx">https://codepen.io/samuel-gibert/pen/oNGobqx</a></p>
+        <p>Si les caractères accentués ou autres caractères spéciaux de votre
+            page sont remplacés par des carrés, des points d’interrogation, ou des
+            séries de lettres comme « Ã© » ou « Ã§ », vous avez probablement un
+            problème d’encodage des caractères. Le problème le plus courant vient du
+            fait que le navigateur ne sait pas quel encodage utiliser pour afficher
+            la page, soit parce qu’aucune information ne lui est transmise, soit
+            parce que l’information est erronée.</p>
+        <p><u>Exemple&nbsp;:</u> Sans précision d’encodage, ce code sera affiché de
+            la façon suivante&nbsp;:</p>
+        <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image3.png" alt="" onclick="openPopup(this)"></div>
+        <p class="exemple">
+            <code>
+&lt;h1&gt;<strong>Je suis content d’être en BTS SIO</strong>&lt;/h1&gt;
+            </code>
+            <button class="copy-button"> 
+                <img src="./Cours HTML - 1_files/copier.png" alt="">
+                <span>Copier le code</span> 
+            </button>
+        </p>    
+        <p>Depuis fin 2011, le WC3, recommande le charset UTF-8 pour l’édition
+            de pages Web en grande partie pour son universalité.</p>
+        <p>En 2017, 90.4&nbsp;% des sites utilisent ce jeu de caractères. Pour
+            indiquer au navigateur comment interpréter les caractères&nbsp;:</p>
+    <p class="exemple">
+        <code>
+&lt;meta charset=<strong>"UTF-8"</strong>&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+    </p>
+
+    <p>Pour information, cette déclaration d’encodage prenait en HTML 4.0 la forme&nbsp;:</p>
+    <p class="exemple">
+        <code>
+&lt;meta http-equiv=<strong>"Content-Type"</strong> content=<strong>"text/html; charset=iso-8859-1"</strong>&gt;</code>
+        <button class="copy-button">
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span>
+        </button>
+
+    </p>
+    <h3 id="autres-types-de-balise">Autres types de balise</h3>
+    <p>Nous verrons plus tard comment intégrer des scripts (javascript), des
+        feuilles de styles CSS, autres balises &lt;meta&gt; seront étudiés plus
+        tard dans le module.</p>
+    
+    </section>
+        <section id="la-balise-body">
+    <h2 id="la-balise-%3Cbody%3E">La balise &lt;body&gt;</h2>
+    <p>Les balises&nbsp;<strong>&lt;body&gt;... &lt;/body&gt;</strong>&nbsp;déterminent ce que l’on
+        appelle le <strong><u>corps</u></strong> du document. C’est entre ces
+        balises que prendra place le code HTML5 qui sera utilisé pour
+        élaborer&nbsp;le contenu de la page.</p>
+    <p>C’est cette partie du document HTML qui sera affiché dans la fenêtre
+        du navigateur et donc visible par l’internaute.</p>
+    <p>En HTML5, les attributs dédiés à la présentation du corps du document
+        de la balise&nbsp;&lt;body&gt;&nbsp;sont maintenant abandonnés pour laisser place
+        à l’utilisation des feuilles de style.</p>
+    <p>Ces attributs qui déterminaient la couleur de l’arrière-plan
+        (bgcolor), l’image d’arrière-plan (background) ou la couleur du texte
+        (text) n’ont plus leur place en HTML5 (obsolète), même si cela reste
+        toujours possible.</p>
+    <p>Au final, notre document HTML5 minimal se présente ainsi&nbsp;:</p>
+    <p class="exemple">
+        <code>
+&lt;! DOCTYPE html&gt;
+&lt;html lang=<strong>"fr"</strong>&gt;
+    &lt;head&gt;
+        &lt;title&gt;<strong>Html5</strong>&lt;/title&gt;
+        &lt;meta charset=<strong>"UTF-8"</strong>&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+    </p>
+    </section>
+        <section id="les_commentaires">
+    <h2 id="-les-commentaires-"> Les commentaires </h2>
+    <p>Il est recommandé de commenter son code HTML (comme pour tout code de
+        programmation), pour en faciliter la compréhension lors d’une mise à
+        jour.</p>
+    <p>Les commentaires doivent être précédés de la balise&nbsp;&lt;!--&nbsp;et être
+        fermés par la balise&nbsp;--&gt;.</p>
+    <p>Tout ce qui sera écrit entre ces balises ne sera pas affiché à
+        l’écran par le navigateur. Notons cependant que ces commentaires restent
+        visibles lorsqu’on consulte le code source de la page.</p>
+    <p>Ajoutons que les commentaires peuvent occuper plusieurs lignes et
+        peuvent prendre place à n’importe quel endroit de la page.</p>
+    <p><u>Exemple</u>&nbsp;:</p>
+
+    <p class="exemple">
+        <code>
+&lt;h1&gt;<strong>Je suis content d’être en BTS SIO</strong>&lt;/h1&gt;
+&lt;!-- commentaire
+        particulier sur plusieurs
+        lignes--&gt;        
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+           <a href="https://codepen.io/samuel-gibert/pen/dyVeyJV" target="_blank" class="run-button">
+            <img src="./Cours HTML - 1_files/codePen.png" alt="">
+            <span> Run</span>
+        </a>
+
+    </p>
+    </section>
+        <section id="les-balises-conteneurs-textes">
+            
+        
+    <h2 id="les-balises-conteneurs-textes">Les balises Conteneurs textes</h2>
+    <p>Lorsque vous allez incorporer du texte dans vos pages Web, vous
+        devrez placer celui-ci dans des conteneurs. Même s’il est possible de ne
+        pas le faire, il vaut mieux éviter cette pratique. Dans ce cas-là, il ne
+        sera pas possible de mettre en forme le texte à l’aide du CSS.</p>
+    <p>Vous avez à votre disposition tous les conteneurs nécessaires : pour
+        les titres, pour le texte courant, pour créer des listes...</p>
+
+
+    <h3 id="les-balises-titre-h1-à-h6">Les Balises titre &lt;H1&gt; à &lt;H6&gt;</h3>
+    <p><a href="https://codepen.io/samuel-gibert/pen/oNGoYwG" target="_blank">https://codepen.io/samuel-gibert/pen/oNGoYwG</a></p>
+    <p>Le langage HTML propose (depuis le début de HTML 1 jusqu’à
+        aujourd'hui) 6 grandeurs de caractères pour les titres. Quand on sait
+        que titre se dit en anglais "heading", l’élaboration de la balise de
+        titre devient évidente ; &lt;h&gt; pour heading suivi du numéro 1 (pour
+        le plus grand), 6 (pour le plus petit).</p>
+    <p><u>Quelques remarques :</u></p>
+    <ul>
+        <li><p>Par défaut, avec la balise &lt;hx&gt;... &lt;/hx&gt;, le texte
+                est mis en gras, avec une certaine police de caractère, une taille. La
+                raison première de cette balise n’est pas la mise en forme, mais la
+                structuration de la page. Tout ce qui concerne la mise en forme doit
+                être fait en CSS.</p></li>
+
+
+
+        <li><p>La balise &lt;hx&gt; est un élément de bloc, et ajoute une ligne
+                vide avant et après le bloc comme illustré. Ces lignes vides s’appellent
+                des marges (margin) qui permettent de définir l’espacement entre les
+                différents éléments HTML.</p></li>
+    </ul>
+    <div class="image-container"> <img src="./Cours HTML - 1_files/html1_Image4.png" alt="" onclick="openPopup(this)"> </div>
+    <ul><li><p>  Comme déjà évoqué ces balises
+                sont très importantes pour le référencement de vos pages. Il est donc
+                important que ces balises contiennent des mots-clés pertinents.</p></li>
+        <li><p>L’attribut align, disponible dans le HTML 4.0, n’est pas repris
+                dans le HTML 5. C’est le cas pour toutes les balises du type conteneur
+                de texte. L’alignement du paragraphe se réalise ainsi par une propriété
+                de style CSS. Attention comme déjà indiqué même si l’usage de certaines
+                balises deviennent obsolète il reste toujours interprété par les
+                navigateurs. Nous verrons plus loin dans ce cours l’usage des différents
+                attributs les plus communs.</p></li>
+    </ul>
+
+    <div class="image-container"> <img src="./Cours HTML - 1_files/html1_Image5.png" alt="" onclick="openPopup(this)"> </div>
+
+
+    <h2 id="les-paragraphes-la-balise-p">Les paragraphes : la balise &lt;P&gt;</h2>
+    <p>Un contenu textuel gagne en lisibilité et compréhension lorsqu’il est divisé en différents paragraphes.</p>
+    <p>Pour définir un paragraphe, la balise &lt;p&gt;... &lt;/p&gt; est  utilisé. C’est un élément de type bloc avec une marge de séparation
+        avant et après.</p>
+    <p><u>Exemple :</u></p>
+    <p class="exemple">
+        <code>
+&lt;p&gt;Un contenu textuel gagne en Lisibilité et
+compréhension lorsqu’il est divisé en différents paragraphes.
+Pour définir un paragraphe, la balise
+&amp;lt;p&amp;gt; ...  &amp;lt;/p&amp;gt; est utilisée.
+C’est un élément de type bloc avec une marge de séparation
+avant et après.
+&lt;/p&gt; 
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+        <a href="https://codepen.io/samuel-gibert/pen/RwLywMM" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+        <span> Run</span>
+    </a>
+
+    </p>
+
+    <p><u>À noter :</u></p>
+    <ul>
+        <li><p>Les caractères <code>&amp;lt; (&lt;)</code> et <code>&amp;gt; (&gt;)</code> sont utilisés pour afficher ces caractères réservés pour
+                les balises. Il en est de même pour les " et &amp; qui sont codés
+                respectivement par &amp;quot; et &amp;amp;</p></li>
+        <li><p>Les retours charriot, ou passages à la ligne dans le code,
+                tabulations, ou une série d’espace est ignorée et assimilées à un
+                espace. Ici le caractère espace est :&nbsp;"&amp;nbsp;" et "&amp;emsp;" pour
+                la tabulation.</p></li>
+        <li><p>Une liste complète est donnée sur ce site : <a href="http://alexandre.alapetite.fr/doc-alex/alx_special.html">ici</a></p></li>
+        <li><p>Dans la mesure du possible si le caractère est imprimable dans le code (é, ç, à, @,©,…) il est préférable d’utiliser cette
+                solution.</p></li>
+    </ul>
+    <p>Exemple : Le charset est ici UTF-8</p>
+    <p class="exemple">
+        <code>
+&lt;p&gt;<strong>caractères spéciaux :♠⓫♦↑≤</strong>&lt;/p&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+        <a href="https://codepen.io/samuel-gibert/pen/RwLywMM" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+        </a>
+        <span> Run</span>
+    </p>
+    <div class="image-container"> <img src="./Cours HTML - 1_files/html1_Image6.png" alt="" onclick="openPopup(this)"> </div>
+    <p>Sans charset ce même code s’affichera de la façon suivante :</p>
+    <div class="image-container"> <img src="./Cours HTML - 1_files/html1_Image7.png" alt="" onclick="openPopup(this)"> </div>
+
+    <ul>
+        <li><p>Pour l’ajout d’un saut de ligne il faut utiliser la balise
+                &lt;br&gt;. Cette balise est dite unique ou orpheline, car elle ne comporte pas de
+                balise de fermeture. La notation &lt;br /&gt;, issue du XHTML 1.0, est
+                également acceptée en HTML5.</p></li>
+    </ul>
+
+    <h3 id="la-balise-pour-les-citations-blockquoteq-cite">La balise pour
+        les citations : &lt;blockquote&gt;,&lt;Q&gt;, &lt;CITE&gt;</h3>
+    
+    <p>Les citations sont mises en avant par les balises &lt;blockquote&gt;... &lt;/blockquote&gt;. </p>
+    <p class="exemple">
+        <code>
+&lt;p&gt; quelqu’un à dit : &lt;blockquote&gt;il y a 10 types de personnes: ceux qui comprennent le
+binaire et les autres&lt;/blockquote&gt;. Intéressant non ?&lt;/p&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+        <a href="https://codepen.io/samuel-gibert/pen/qBPYBGV" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+
+
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image8.png" alt="" onclick="openPopup(this)"></div>
+
+    <p>Comme illustré elle s’affiche
+        également avec un léger retrait par rapport à la marge gauche et un
+        retrait en marge droite. C’est une balise du type élément bloc.</p>
+
+
+    <p>La balise &lt;q&gt; permet également une citation. Elle ajoute
+        automatiquement des guillemets à la citation. C’est une balise du type
+        en ligne. Il est donc possible de l’incorporer dans une balise
+        &lt;p&gt;</p>
+    <p class="exemple">
+        <code>
+&lt;p&gt; quelqu’un à
+dit : &lt;q&gt;il y a 10 types de personnes: ceux qui comprennent le
+binaire et les autres&lt;/q&gt;. Intéressant non ?&lt;/p&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+        <a href="https://codepen.io/samuel-gibert/pen/qBPYBGV" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image9.png" alt="" onclick="openPopup(this)"></div>
+
+    <p>La balise &lt;cite&gt; fait à peu près la même chose que &lt;q&gt;.
+        C’est une balise de type en ligne. Elle formate la citation en
+        italique.</p>
+    <p>Exemple :</p>
+    <p class="exemple">
+        <code>
+&lt;p&gt; quelqu’un a dit : &lt;cite&gt;il y a 10 types de
+personnes: ceux qui comprennent le binaire et les autres&lt;/cite&gt;.
+Intéressant non ?&lt;/p&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+        <a href="https://codepen.io/samuel-gibert/pen/qBPYBGV" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image10.png" alt="" onclick="openPopup(this)"></div>
+
+    <h3 id="les-listes-ol-ul-li-dl-dt-dd">Les listes : &lt;OL&gt; &lt;UL&gt;
+        &lt;LI&gt; &lt;DL&gt; &lt;DT&gt; &lt;DD&gt; </h3>
+    <p>Les listes, bien connues des utilisateurs de traitement de texte,
+        sont indispensables pour structurer votre texte.</p>
+
+    <h4 id="les-listes-ordonnées">Les listes ordonnées</h4>
+
+    <p>Une liste ordonnée est mise en place par la balise &lt;ol&gt;...
+        &lt;ol&gt;. On détermine ensuite, à l’intérieur de ces balises, les
+        éléments ou les items de la liste, soit les balises &lt;li&gt;...
+        &lt;/li&gt;. La structure générale d’une liste ordonnée ou numérotée est
+        donc :</p>
+    <p class="exemple">
+        <code>
+&lt;ol&gt;
+    &lt;li&gt;Chapitre 1&lt;/li&gt;
+    &lt;li&gt;Chapitre 2&lt;/li&gt;
+    &lt;li&gt;Chapitre 3&lt;/li&gt;
+    &lt;li&gt;Chapitre 4&lt;/li&gt;
+&lt;/ol&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+        <a href="https://codepen.io/samuel-gibert/pen/QWqrwLw" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+    <ul>
+        <li><p>L’attribut <strong>start</strong> permet de commencer la
+                numérotation à un autre chiffre que 1.</p></li>
+        <li><p>Le nouvel attribut HTML5 <strong>reversed</strong> permet une
+                numérotation descendante (5, 4, 3, 2, 1) au lieu de la numérotation
+                ascendante habituelle (1, 2, 3, 4, 5). À ce jour, ce nouvel attribut est
+                repris par les versions récentes de Firefox, Chrome et Opera.</p></li>
+        <li><p>Bien que déprécié, l’attribut <strong>type</strong> permet de
+                définir le type de numérotation : <code>type="1|a|À|i|I"</code></p></li>
+    </ul>
+    <p><u>Exemple :</u></p>
+
+    <p class="exemple">
+        <code>
+&lt;ol start="4" type="I" reversed&gt;
+    &lt;li&gt;<strong>Chapitre 1</strong>&lt;/li&gt;
+    &lt;li&gt;<strong>Chapitre 2</strong>&lt;/li&gt;
+    &lt;li&gt;<strong>Chapitre 3</strong>&lt;/li&gt;
+    &lt;li&gt;<strong>Chapitre 4</strong>&lt;/li&gt;
+&lt;/ol&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+         <a href="https://codepen.io/samuel-gibert/pen/QWqrwLw" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image11.png" alt="" onclick="openPopup(this)"></div>
+
+    <ul>
+        <li><p>L’attribut <strong>value</strong> permet de modifier la
+                valeur pour un item : <code>&lt;li value=<strong>"8"</strong>&gt;<strong>Chapitre 4</strong>&lt;/li&gt;</code></p></li>
+    </ul>
+    <h4 id="les-listes-non-ordonnées">Les listes non ordonnées</h4>
+    <p>Les listes non ordonnées, aussi appelées listes à puces, sont
+        introduites par la balise&nbsp;&lt;ul&gt;... &lt;/ul&gt;. On détermine
+        ensuite, à l’intérieur de cette balise, les éléments ou les items de
+        celle-ci, soit les balises&nbsp;&lt;li&gt;... &lt;/li&gt;. La structure
+        générale d’une liste à puces est donc :</p>
+    <p class="exemple">
+        <code>
+&lt;ul&gt;
+    &lt;li&gt;Chapitre 1&lt;/li&gt;
+    &lt;li&gt;Chapitre 2&lt;/li&gt;
+    &lt;li&gt;Chapitre 3&lt;/li&gt;
+    &lt;li&gt;Chapitre 4&lt;/li&gt;
+&lt;/ul&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+         <a href="https://codepen.io/samuel-gibert/pen/QWqrwLw" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+    <ul>
+        <li><p>L’attribut <strong>type</strong> permet de définir la forme de la
+                puce : "disc, square circle".</p></li>
+    </ul>
+    <h4 id="combines-les-types-de-listes">Combines les types de listes</h4>
+    <p class="exemple">
+        <code>
+&lt;ol&gt;
+    &lt;li&gt;<strong>Les titres</strong>&lt;/li&gt;
+    &lt;li&gt;<strong>Les listes en Html5</strong>
+    &lt;ul&gt;
+        &lt;li&gt;<strong>Listes ordonnées</strong>&lt;/li&gt;
+        &lt;li&gt;<strong>Listes non ordonnées</strong>&lt;/li&gt;
+        &lt;li&gt;<strong>Listes imbriquées</strong>&lt;/li&gt;
+        &lt;li&gt;<strong>Listes de définitions</strong>&lt;/li&gt;
+        &lt;li&gt;<strong>Le menu de listes</strong>&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;<strong>Les tableaux en Html5</strong>&lt;/li&gt;
+    &lt;li&gt;<strong>Les formulaires en Html5</strong>&lt;/li&gt;
+&lt;/ol&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+        <a href="https://codepen.io/samuel-gibert/pen/QWqrwLw" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image12.png" alt="" onclick="openPopup(this)"></div>
+
+
+    <h4 id="les-listes-de-définition">Les listes de définition</h4>
+    <p>Cette liste, dite de définition, présente une liste de termes, chacun
+        d’entre eux étant suivi de sa description. Elle utilise la balise
+        &lt;dl&gt;…&lt;/dl&gt;. Entre ces balises, on reprend ce qu’on a appelé
+        le terme par la balise &lt;dt&gt;... &lt;/dt&gt; suivi par la définition
+        dans la balise &lt;dd&gt;... &lt;/dd&gt;. <u>Exemple :</u></p>
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image13.png" alt="" onclick="openPopup(this)"></div>
+
+    <p class="exemple">
+        <code>
+&lt;/dl&gt;
+    &lt;dt&gt;<strong>ol</strong>&lt;/dt&gt;
+    &lt;dd&gt;<strong>Liste ordonnée</strong>&lt;/dd&gt;
+    &lt;dt&gt;<strong>ul</strong>&lt;/dt&gt;
+    &lt;dd&gt;<strong>Liste non ordonnée</strong>&lt;/dd&gt;
+    &lt;dt&gt;<strong>dl</strong>&lt;/dt&gt;
+    &lt;dd&gt;<strong>Liste de définitions</strong>&lt;/dd&gt;
+&lt;/dl&gt;</code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>  
+         <a href="https://codepen.io/samuel-gibert/pen/QWqrwLw" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+
+    <h3 id="le-texte-preformaté-pre">Le texte préformaté : &lt;PRE&gt;</h3>
+
+    <p>La balise &lt;pre&gt;...
+        &lt;/pre&gt; permets d’afficher le texte tel qu’il a été encodé dans
+        l’éditeur de texte. Les espaces, les tabulations et les retours charriot
+        sont respectés à l’écran. Si elle comporte du texte, celui-ci sera
+        affiché avec une police à pas fixe (tous les caractères ont exactement
+        la même largeur). C’est le cas des polices de caractères comme Courrier
+        New, Consolas, qui sont utilisés par les IDE.</p>
+
+    <p class="exemple">
+        <code>
+            &lt;pre&gt;
+            Le texte inclus dans une balise pre
+            est affiché dans une police à pas fixe
+            et préserve                    les espaces
+            Ainsi que les passages à la ligne.
+            &lt;/pre&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+         <a href="https://codepen.io/samuel-gibert/pen/zYEjxvz" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image14.png" alt="" onclick="openPopup(this)"></div>
+
+
+    <h3 id="ajout-dune-ligne-séparatrice-hr">Ajout d’une ligne séparatrice :
+        &lt;Hr&gt;</h3>
+    
+    <p>Le trait horizontal peut se
+        révéler fort utile pour définir un changement dans le contenu. La balise
+        &lt;hr&gt; réalise cette fonction. Comme pour la balise br celle-ci n’a
+        pas de balise fermante. On pourra donc écrire &lt;hr/&gt;. Avec le CSS
+        il est alors possible d’en modifier l’aspect.</p>
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image15.png" alt="" onclick="openPopup(this)"></div>
+    <p class="exemple">
+        <code>
+&lt;p&gt;Chapitre1&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Chapitre 2&lt;/p&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+         <a href="https://codepen.io/samuel-gibert/pen/rNGvaem" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image16.png" alt="" onclick="openPopup(this)"></div>
+
+</section>
+        <section id="La_mise_en_forme_du_texte">
+    <h2 id="-la-mise-en-forme-du-texte"> La mise en forme du texte</h2>
+    <p>Une fois que vous avez placé vos textes dans les conteneurs texte
+        (par exemple une balise &lt;p&gt;) on peut appliquer des éléments HTML
+        de mise en forme qui sont tout aussi sémantiques. C’est-à-dire que la
+        mise en forme donne du sens au contenu concerné, ce n’est pas simplement
+        une mise en forme graphique. Il ne s’agit que de quelques formatages de
+        texte des plus basiques comme mettre du texte en gras, en italique, en
+        exposant ou en indice. La plupart de ses balises sont de type en
+        ligne</p>
+
+    <h3 id="mettre-en-gras-b-strong">Mettre en gras : &lt;B&gt; &lt;STRONG&gt;</h3>
+    <p>B pour Bold.</p>
+    <p class="exemple">
+        <code>
+&lt;p&gt;Texte: &lt;b&gt; Du texte en gras &lt;/b&gt;&lt;/p&gt;&nbsp;
+&lt;p&gt;Texte: &lt;strong&gt; Du texte en gras &lt;/strong&gt;&lt;/p&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+         <a href="https://codepen.io/samuel-gibert/pen/QWqrwKj" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+    <p>Visuellement pas de différence, mais l’interprétation en est fort
+        différente dans les synthèses vocales qui lisent les pages Web à
+        l’intention des personnes visuellement déficientes. La balise
+        &lt;strong&gt; renforcera le contenu par une intonation de voix
+        différente ou un niveau sonore plus élevé</p>
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image17.png" alt="" onclick="openPopup(this)"></div>
+
+
+    <h3 id="la-mise-en-italique-i-em">La mise en italique &lt;i&gt; &lt;em&gt;</h3>
+    <p>Exemple: il est possible de combiner texte en gras et en italique.
+    </p>
+    <p class="exemple">
+        <code>
+&lt;p&gt;&lt;i&gt;Du texte en italique seul&lt;/i&gt;&lt;/p&gt;
+&lt;p&gt;&lt;&lt;b&gt;&lt;i&gt;Du texte en italique et en gras&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+         <a href="https://codepen.io/samuel-gibert/pen/QWqrwKj" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+
+    <p>Il existe aussi la balise &lt;em&gt; (emphase) qui met également le
+        texte en italique. La balise &lt;em&gt; a pour but de mettre en avant,
+        de mettre en exergue le texte qu’elle contient de façon sémantique.</p>
+
+    <h3 id="la-mise-en-indice-et-en-exposant-sup-sub">La mise en indice et
+        en exposant : &lt;SUP&gt; &lt;SUB&gt; </h3>
+    <p>Il est parfois nécessaire de mettre des caractères en exposant ou en
+        indice dans, par exemple, des formules mathématiques ou chimiques. La
+        balise&nbsp;&lt;sup&gt;... &lt;/sup&gt;&nbsp;mettra le contenu en exposant et la
+        balise&nbsp;&lt;sub&gt;... &lt;/sub&gt;&nbsp;en indice.</p>
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image18.png" alt="" onclick="openPopup(this)"></div>
+    <p>Exemple :</p>
+    <p class="exemple">
+        <code>
+&lt;p&gt;(a + b)&lt;sup&gt;2&lt;/sup&gt; = a&lt;sup&gt;2&lt;/sup&gt; + 2ab + b&lt;sup&gt;2&lt;/sup&gt;
+&lt;br&gt; H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+         <a href="https://codepen.io/samuel-gibert/pen/QWqrwKj" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+
+    <h3 id="le-souligné-u-et-ins-le-barre-s-et-del">Le souligné &lt;u&gt; et &lt;INS&gt;, le barré &lt;S&gt; et &lt;del&gt;</h3>
+    <p>L’élément&nbsp;&lt;u&gt;&nbsp;permet de faire ressortir une portion de texte
+        sans importance sémantique. Le fait de souligner un texte peut engendrer
+        une confusion avec les liens hypertextes, qui sont aussi soulignés par
+        défaut. De ce fait, le W3C suggère&nbsp;d’en faire un usage judicieux.
+        &lt;ins&gt; a le même effet, mais indique une sémantique de contenu
+        nouveau dans la page.</p>
+    <p>&lt;s&gt; permets de barrer un texte sans importance sémantique.
+        &lt;del&gt; a le même effet, mais indique une sémantique de contenu
+        supprimé dans la page.</p>
+    <p><u>Exemple</u> :</p>
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image19.png" alt="" onclick="openPopup(this)"></div>
+    <p class="exemple">
+        <code>
+&lt;p&gt;<strong>de ce fait, le W3C suggère d’en faire un usage</strong> &lt;s&gt;<strong>systématique</strong>&lt;/s&gt;&lt;u&gt;<strong>judicieux</strong>&lt;/u&gt;<strong>.</strong>&lt;/p&gt;
+&lt;p&gt;<strong>de ce fait, le W3C suggère d’en faire un usage</strong> &lt;del&gt;<strong>systématique</strong>&lt;/del&gt; &lt;ins&gt;<strong>judicieux</strong>&lt;/ins&gt;<strong>.</strong>&lt;/p&gt;
+
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+ <a href="https://codepen.io/samuel-gibert/pen/QWqrwKj" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+
+
+
+    <h3 id="réduire-la-taille-dun-texte-small">Réduire la taille d’un texte&lt;small&gt;</h3>
+    <p>La balise&nbsp;&lt;small&gt;&nbsp;permet d’écrire avec une taille de caractère
+        plus petite que le contexte courant donnant une sémantique d’un texte de
+        moindre importante. L’usage possible est fait pour les clauses des
+        contrats, les mentions spécifiques et légales.</p>
+    <p>Exemple :</p>
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image20.png" alt="" onclick="openPopup(this)"></div>
+
+    <p class="exemple">
+        <code>
+&lt;p&gt;<strong>voici le contrat:</strong> &lt;small&gt; <strong>ce n’est pas parce que c’est écrit petit que je ne dois pas être lu...</strong> &lt;/small&gt;&lt;/p&gt;
+        </code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+        <a href="https://codepen.io/samuel-gibert/pen/QWqrwKj" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+    </p>
+
+
+    <h3 id="sens-de-lecture-bdo">Sens de lecture :&lt;BDO&gt;</h3>
+    <p>Certains systèmes d’écriture, tels que l’alphabet arabe et hébreu,
+        s’écrivent de droite à gauche. Le HTML, langage universel, se devait de
+        tenir compte de cette spécificité. L’attribut dir permet de définir le
+        sens de lecture :"ltr"&nbsp;(<em>left to right</em>) , dir="rtl"&nbsp;(<em>right
+            to left</em>). Cet attribut est également utilisable au niveau des
+        balises &lt;p&gt;, mais aussi au niveau &lt;html&gt;.</p>
+    <p>Placé dans une balise &lt;bdo&gt; cet attribut inverse l’ordre
+        d’apparition des lettres.</p>
+    <p><u>Exemple :</u></p>
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image21.png" alt="" onclick="openPopup(this)"></div>
+    <p class="exemple">
+        <code>
+&lt;p dir=<strong>"rtl"</strong>&gt;<strong>L’attribut dir permet de définir le sens de lecture</strong>&lt;/p&gt;
+&lt;p&gt;&lt;bdo dir=<strong>"rtl"</strong> &gt;<strong>L’attribut dir permet de définir le sens de lecture</strong>&lt;/bdo&gt;&lt;/p&gt;
+&lt;p dir=<strong>"rtl"</strong>&gt;&lt;bdo dir=<strong>"rtl"</strong> &gt;<strong>L’attribut dir permet de définir le sens de lecture</strong>&lt;/bdo&gt;&lt;/p&gt;</code>
+        <button class="copy-button"> 
+            <img src="./Cours HTML - 1_files/copier.png" alt="">
+            <span>Copier le code</span> 
+        </button>
+         <a href="https://codepen.io/samuel-gibert/pen/QWqrwKj" target="_blank" class="run-button">
+             <img src="./Cours HTML - 1_files/codePen.png" alt="">
+             <span> Run</span>
+        </a>
+
+    </p>
+
+
+    <h3 id="autres-balises">Autres balises</h3>
+      <a href="https://codepen.io/samuel-gibert/pen/RwLyNKv" target="_blank">Test dans codePen</a>
+    <p><b><code>&lt;dfn&gt;&nbsp;:</code></b> Permet de mettre en évidence un terme défini dans le
+        contexte courant. Il n’y a pas de mise en forme par défaut, chaque
+        navigateur est libre. Mais la plupart du temps, c’est de l’italique qui
+        est appliqué.</p>
+    <p><b><code>&lt;abbr&gt;&nbsp;:</code></b> permet de mettre en évidence une abréviation. Vous
+        pouvez utiliser l’attribut title&nbsp;pour indiquer le libellé complet de
+        l’abréviation.</p>
+    <p><b><code>&lt;code&gt;&nbsp;:</code></b> permet de mettre en évidence un code informatique. La
+        mise en forme se fait généralement avec une police de caractères à
+        largeur fixe de type Courier.</p>
+    <p><b><code>&lt;var&gt;&nbsp;:</code></b> permet de mettre en évidence une variable mathématique
+        ou informatique. La mise en forme se fait avec de l’italique.</p>
+    <p><b><code>&lt;samp&gt;&nbsp;:</code></b> permet de mettre en évidence un exemple ou un
+        échantillon (<em>sample</em>&nbsp;en anglais). La mise en forme se fait
+        généralement avec une police de caractères à largeur&nbsp;fixe de type
+        Courier.</p>
+    <p><b><code>&lt;kbd&gt;&nbsp;:</code></b> permet de mettre
+        en évidence un texte à saisir au clavier, une touche ou une combinaison
+        de touches. La mise en forme se fait généralement avec une police de
+        caractères à largeur fixe de type Courier.</p>
+    <p><b><code>&lt;time&gt;&nbsp;:</code></b> permet de mettre en évidence les indications de date
+        et d’heure.</p>
+    <p><b><code>&lt;mark&gt;&nbsp;:</code></b> permet de mettre en évidence une portion de texte
+        importante, avec une mise en forme surlignée en fond jaune.</p>
+    <p><b><code>&lt;meter&gt;&nbsp;:</code></b> permet d’insérer une jauge affichant un état
+        numérique défini sur une échelle spécifiée.</p>
+    <p><b><code>&lt;progress&gt;&nbsp;:</code></b> permet d’insérer une barre de progression,
+        affichant un pourcentage de réalisation. Nous verrons comment faire
+        évoluer cette barre par la suite.</p>
+    <p><b><code>&lt;summary&gt;/&lt;details&gt;&nbsp;:</code></b> permettent d’afficher les détails
+        (avec l’élément&nbsp;&lt;details&gt;), masqués par défaut, d’un élément
+        affiché dans&nbsp;&lt;summary&gt;.</p>
+    <p>Le tout en image :</p>
+
+    <div class="image-container"><img src="./Cours HTML - 1_files/html1_Image22.png" alt="" onclick="openPopup(this)"></div>
+</section>
+        
+        <script>  generateToc('toc', ['h2']); </script>
+
+</body></html>
