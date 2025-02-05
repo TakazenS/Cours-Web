@@ -47,13 +47,13 @@ body {
 }
 
 .menu {
-    width: 60%;
+    width: 48%;
     display: flex;
     justify-content: space-around;
 }
 
 .menu_TP3 {
-    width: 35%;
+    width: 25%;
     display: flex;
     justify-content: space-around;
 }
@@ -117,38 +117,6 @@ body {
     padding-left: 20px;
     background-color: #cfcfcf;
     border-radius: 15px;
-}
-
-.nav_section {
-    padding: 30px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-}
-
-.nav_container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-    width: 40%;
-}
-
-.nav_container a {
-    text-decoration: none;
-    color: white;
-    background-color: #555;
-    padding: 12px;
-    border-radius: 10px;
-    width: 140px;
-    display: flex;
-    justify-content: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.nav_container a:hover {
-    background-color: #777;
-    transform: scale(1.1);
 }
 
 .tabulation_ex2TP3 {
