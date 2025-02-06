@@ -74,25 +74,19 @@ body {
     padding: 10px;
     border-radius: 10px;
 }
-/*
-.menu_bar {
-    height: 7vh;
-    width: 100%;
-}
-*/
 
 .menu_bar {
-    position: fixed; /* Le positionne de façon fixe */
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 0; /* Le place en haut de la page */
-    left: 0; /* Aligne le header sur la gauche */
-    width: 100%; /* Prend toute la largeur de la page */
-    background-color: #333; /* Exemple de couleur de fond */
-    color: white; /* Couleur du texte */
-    padding: 10px 0; /* Espacement intérieur du header */
-    z-index: 1000; /* Assure que le header soit au-dessus d'autres éléments */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
     background: rgba(51, 51, 51, 0.7);
 }
 
