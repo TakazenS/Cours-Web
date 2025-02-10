@@ -97,14 +97,18 @@ body {
     transition: transform 0.3s ease-in-out;
     border: none;
     background-color: white;
+    border-radius: 10px;
 }
 
-.grille_images button:hover {
+.images_card {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover {
     cursor: pointer;
     transform: scale(1.06);
 }
-
-.gri
 
 .section_exo2tp3 {
     background-color: white;
