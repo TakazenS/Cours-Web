@@ -100,7 +100,7 @@ body {
     border-radius: 10px;
 }
 
-.images_card {
+.card img {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
