@@ -260,4 +260,68 @@ body {
     margin: 0;
 }
 
+.tab1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+th.vacances {
+    background-color: #444;
+}
+
+th.zone-a {
+    background-color: #f4a941;
+}
+
+th.zone-b {
+    background-color: #4a90e2;
+}
+
+th.zone-c {
+    background-color: #64b347;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.zone-a-content {
+    background-color: #fff6e6;
+}
+
+.zone-b-content {
+    background-color: #e6f2ff;
+}
+
+.zone-c-content {
+    background-color: #e6f9e6;
+}
+
+.vacance-title {
+    font-weight: bold;
+    background-color: #e0e0e0;
+}
+
+.highlight {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
 
