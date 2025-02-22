@@ -16,8 +16,9 @@
          url('../Fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
 }
 
-body {
+html, body {
     margin: 0;
+    height: 100%;
 }
 
 p {
@@ -25,10 +26,43 @@ p {
 }
 
 .header1et2 {
-    position: fixed;
+    position: relative;
     display: flex;
+    padding-bottom: 80px;
     width: 100%;
-    height: 80px;
     background-color: red;
 }
+
+.div-centre1et2 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.gauche1et2 {
+    position: relative;
+    width: 15%;
+    height: 100vh;
+    background-color: blue;
+}
+
+.milieu1 {
+    position: relative;
+    flex: 1;
+    background-color: green;
+}
+
+.milieu2 {
+    position: relative;
+    flex: 1;
+    background-color: green;
+}
+
+.droite2 {
+    position: relative;
+    background-color: brown;
+    width: 15%;
+}
+
 
