@@ -28,7 +28,7 @@ p {
 .header1et2 {
     position: relative;
     display: flex;
-    padding-bottom: 80px;
+    height: 80px;
     width: 100%;
     background-color: red;
 }
