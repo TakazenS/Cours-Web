@@ -1,19 +1,19 @@
 @font-face {
     font-family: 'DM_Sans';
-    src: url('../Fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf') format('truetype'),
-         url('../Fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+    src: url('../../../Fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf') format('truetype'),
+         url('../../../Fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'JetBrains_Mono';
-    src: url('../Fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf') format('truetype'),
-         url('../Fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+    src: url('../../../Fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf') format('truetype'),
+         url('../../../Fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('../Fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype'),
-         url('../Fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    src: url('../../../Fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype'),
+         url('../../../Fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
 }
 
 html, body {
@@ -23,6 +23,7 @@ html, body {
 
 p {
     margin: 0;
+    font-family: 'DM_Sans', 'JetBrains_Mono', 'Montserrat';
 }
 
 /****************** 1 et 2 ******************/
