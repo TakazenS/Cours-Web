@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../Images/logo.png">
+    <link rel="apple-touch-icon" href="../../Images/logo.png">
+    <title>TP 8 Exo 6</title>
+    <style>
+        @font-face {
+            font-family: 'DM_Sans';
+            src: url('../../Fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf') format('truetype'),
+                 url('../../Fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'JetBrains_Mono';
+            src: url('../../Fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf') format('truetype'),
+                 url('../../Fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('../../Fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype'),
+                 url('../../Fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'DM_Sans', 'JetBrains_Mono', 'Montserrat';
+            width: 100%;
+        }
+
+        .page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 50%;
+        }
+
+        .container-tableau {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+        .tableau {
+            border-collapse: collapse;
+            width: 50%;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 5px;
+            text-align: center;
+        }
+        td p {
+            width: 100%;
+            border: none;
+            padding: 5px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="container-tableau">
+            <table class="tableau">
+                <tr><td><p id="0"></p></td></tr>
+                <tr><td><p id="1"></p></td></tr>
+                <tr><td><p id="2"></p></td></tr>
+                <tr><td><p id="3"></p></td></tr>
+                <tr><td><p id="4"></p></td></tr>
+                <tr><td><p id="5"></p></td></tr>
+                <tr><td><p id="6"></p></td></tr>
+                <tr><td><p id="7"></p></td></tr>
+                <tr><td><p id="8"></p></td></tr>
+                <tr><td><p id="9"></p></td></tr>
+            </table>
+        </div>
+    </div>
+    <script src="script/script-exo6to7-TP8.js"></script>
+</body>
+</html>

@@ -151,7 +151,7 @@ body {
 }
 
 .menu-index {
-    width: 48%;
+    width: 65%;
     display: flex;
     justify-content: space-around;
 }
@@ -179,9 +179,15 @@ body {
     display: flex;
     justify-content: space-around;
 }
-
+    
 .menu-TP7 {
     width: 92%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-TP8 {
+    width: 33%;     
     display: flex;
     justify-content: space-around;
 }
