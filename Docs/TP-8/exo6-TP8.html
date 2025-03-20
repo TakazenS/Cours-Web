@@ -28,36 +28,46 @@
         body {
             margin: 0;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             font-family: 'DM_Sans', 'JetBrains_Mono', 'Montserrat';
-            width: 100%;
         }
 
         .page {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 50%;
-            height: 50%;
+            width: 100%;
+            height: 100vh;
         }
 
         .container-tableau {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
-            width: 100%;
+            height: 80%;
+            width: 30%;
         }
+
         .tableau {
             border-collapse: collapse;
-            width: 50%;
+            width: 100%;
+            height: 100%;
         }
+
+        .reset {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20%;
+        }
+
         td {
             border: 1px solid #ddd;
             padding: 5px;
             text-align: center;
         }
+
         td p {
             width: 100%;
             border: none;
@@ -83,8 +93,9 @@
                 <tr><td><p id="8"></p></td></tr>
                 <tr><td><p id="9"></p></td></tr>
             </table>
+            <button class="reset">Reset</button>
         </div>
     </div>
-    <script src="script/script-exo6to7-TP8.js"></script>
+    <script src="script/script-exo6-TP8.js"></script>
 </body>
 </html>

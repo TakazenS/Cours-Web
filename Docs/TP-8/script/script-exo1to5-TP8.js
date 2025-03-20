@@ -4,11 +4,11 @@ let y = '';
 while (negative != 1) {
     x = parseFloat(prompt('Entrez une valeur pour la longueur'));
     y = parseFloat(prompt('Entrez une valeur pour la largeur'));
-    if (x >= 0 && y >= 0) {
+    if ((x >= 0 && y >= 0) || (x === y)) {
         negative = 1;
         break;
     }
-    negativeValue = alert('Vous ne pouvez pas entrer des nombres négatifs !')
+    negativeValue = alert('Vous ne pouvez pas entrer des nombres négatifs ou égaux !')
 }
 
 let question = confirm(`Ces valeurs vous vont-elles : x = ${x} et y = ${y}`);
