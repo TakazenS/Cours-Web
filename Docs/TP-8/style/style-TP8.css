@@ -37,6 +37,23 @@ body {
 
 .formulaire {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    width: 80%;
+}
 
+.labels {
+    margin-top: 15px;
+}
+
+.inputs {
+    width: 90%;
+    height: 30px;
+}
+
+#envoyer {
+    margin-top: 25px;
+    width: 150px;
+    height: 30px;
 }
