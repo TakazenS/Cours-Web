@@ -1,4 +1,7 @@
-document.getElementById('envoyer').addEventListener('click', calcVolume());
+let envoyer = document.getElementById('envoyer');
+let emptyInput = document.getElementById('empty-input');
+let heightError = document.getElementById('height-error');
+envoyer.addEventListener('click', calcVolume);
 
 function calcVolume() {
     let prenom = document.getElementById('prenom');
@@ -8,27 +11,40 @@ function calcVolume() {
     nom = nom.value;
 
     let surface = document.getElementById('surface');
-    surface = surface.value;
+    surface = parseInt(surface.value);
     
     let epaisseur = document.getElementById('epaisseur');
-    epaisseur = epaisseur.value;
+    epaisseur = parseInt(epaisseur.value);
 
-    do {
+    if ((prenom === '' || nom === '') || (isNaN(surface) || isNaN(epaisseur))) {
+        heightError.style.display = 'none';
+        emptyInput.style.display = 'flex';
+        envoyer.style.marginTop = '12px';
+        return;
+    } else {
+        emptyInput.style.display = 'none';
+        envoyer.style.marginTop = '20px';
+    };
 
-        if (epaisseur < 15) {
-            let alert = document.getElementById('formulaire');
-            alert.insertAdjacentElement('beforeend', "<p>L'epaisseur ne doit pas être inferieure à 15cm</p>");
-        } else if (epaisseur > 35) {
-            window.alert(`Valeur trop élevée !`);
-        };
+    if (epaisseur < 15 || epaisseur > 35) {
+        emptyInput.style.display = 'none';
+        heightError.style.display = 'flex';
+        envoyer.style.marginTop = '12px';
+        return;
+    } else {
+        heightError.style.display = 'none';
+        envoyer.style.marginTop = '20px';
+    };
 
-    } while (epaisseur < 15 || epaisseur > 35);
-
+    //350Kg
     const dosage = 350;
+    //91€/m3
     const prixMcube = 91;
 
-    let volumeBeton = parseFloat(surface * epaisser / 100);
+    //m3
+    let volumeBeton = parseFloat(surface * epaisseur / 100);
 
+    //Kg
     let qteCiment = (volumeBeton * dosage) / 1000;
 
     let nbCamion = parseInt(Math.ceil(volumeBeton / 9));

@@ -19,19 +19,25 @@
 body {
     margin: 0;
     background-color: darkgray;
-    display: flex;
-    justify-content: center;
     font-family: 'DM_Sans', 'JetBrains_Mono', 'Montserrat';
 }
 
+/*FORMULAIRE*/
+
+.center-zone {
+    /*A CHANGER LORS DE L'AFFICHAGE DU DEVIS*/
+    display: none;
+    justify-content: center;
+}
 
 .zone-globale {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: white;
     height: 60vh;
-    width: 40%;
+    width: 30%;
     margin-top: 150px;
 }
 
@@ -52,10 +58,31 @@ body {
     height: 30px;
 }
 
+#empty-input {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#height-error {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-alert {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: red;
+}
+
 #envoyer {
-    margin-top: 25px;
+    margin-top: 20px;
     width: 150px;
     height: 30px;
 }
+
+/*DEVIS*/
+
 
 

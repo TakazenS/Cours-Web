@@ -9,24 +9,56 @@
     <title>TP 8 Exo 8</title>
 </head>
 <body>
-    <section class="zone-globale">
-        <div class="formulaire" id="formulaire">
-            <label class="labels1" for="prenom">Prénom :</label>
-            <input class="inputs" type="text" required name="prenom" id="prenom" size="20">
-            <label class="labels" for="nom">Nom :</label>
-            <input class="inputs" type="text" required name="nom" id="nom" size="20">
-            <label class="labels" for="surface">Surface :</label>
-            <input class="inputs" type="text" required name="surface" id="surface" size="20">
-            <label class="labels" for="Epaisseur">Epaisseur :</label>
-            <input class="inputs" type="text" required name="epaisseur" id="epaisseur" size="20">
-        </div>
-        <div>
-            <button id="envoyer">Envoyer</button>
-        </div>
-    </section>
+    <div class="center-zone">
+        <section class="zone-globale">
+            <div class="formulaire" id="formulaire">
+                <label class="labels1" for="prenom">Prénom :</label>
+                <input class="inputs" type="text" name="prenom" id="prenom" size="20">
+                <label class="labels" for="nom">Nom :</label>
+                <input class="inputs" type="text" name="nom" id="nom" size="20">
+                <label class="labels" for="surface">Surface :</label>
+                <input class="inputs" type="text" name="surface" id="surface" size="20">
+                <label class="labels" for="Epaisseur">Epaisseur :</label>
+                <input class="inputs" type="text" name="epaisseur" id="epaisseur" size="20">
+            </div>
+            <div class="alert" id="empty-input">
+                <p class="text-alert">Vous devez remplir tout les champs !</p>
+            </div>
+            <div class="alert" id="height-error">
+                <p class="text-alert">L'epaisseur doit être comprise entre 15 et 35cm !</p>
+            </div>
+            <div>
+                <button id="envoyer">Envoyer</button>
+            </div>
+        </section>
+    </div>
     <section class="zone-devis">
-        <div class="devis">
+        <div class="zone-n-devis">
+            <h2 class="n-devis">DEVIS N°12345</h2>
+        </div>
+        <section class="info">
+            <div class="entreprise">
 
+            </div>
+            <div class="client">
+
+            </div>
+        </section>
+        <main class="resultats">
+            <div class="container-tab">
+                <table class="tableau">
+
+                </table>
+            </div>
+            <div class="reglement">
+
+            </div>
+        </main>
+        <div class="zone-sign">
+            
+        </div>
+        <div class="click-to-pdf">
+            <button class="to-pdf-button" id="to-pdf">Imprimer en PDF</button>
         </div>
     </section>
     <script src="script/script-exo8-TP8.js"></script>
