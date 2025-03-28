@@ -122,6 +122,7 @@ body {
 
 .button-devis {
     padding: 16px 20px;
+    display: inline;
     border: none;
     outline: none;
     background-color: #151515;
@@ -138,7 +139,7 @@ body {
   }
 
 @media print {
-    button {
+    #to-pdf, #to-form {
         display: none;
     }
 }
