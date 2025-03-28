@@ -6,19 +6,20 @@
     <link rel="shortcut icon" href="../../Images/logo.png">
     <link rel="apple-touch-icon" href="../../Images/logo.png">
     <link rel="stylesheet" href="style/style-TP8.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <title>TP 8 Exo 8</title>
 </head>
 <body>
     <div class="center-zone" id="center-zone">
         <section class="zone-globale">
             <div class="formulaire" id="formulaire">
-                <label class="labels1" for="prenom">Prénom :</label>
+                <label class="labels1" for="prenom">Prénom *:</label>
                 <input class="inputs" type="text" name="prenom" id="prenom" size="20">
-                <label class="labels" for="nom">Nom :</label>
+                <label class="labels" for="nom">Nom *:</label>
                 <input class="inputs" type="text" name="nom" id="nom" size="20">
-                <label class="labels" for="surface">Surface (m²) :</label>
+                <label class="labels" for="surface">Surface (m²)* :</label>
                 <input class="inputs" type="text" name="surface" id="surface" size="20">
-                <label class="labels" for="Epaisseur">Epaisseur (cm) :</label>
+                <label class="labels" for="Epaisseur">Epaisseur (cm)* :</label>
                 <input class="inputs" type="text" name="epaisseur" id="epaisseur" size="20">
             </div>
             <div class="alert" id="empty-input">
@@ -28,7 +29,7 @@
                 <p class="text-alert">L'epaisseur doit être comprise entre 15 et 35cm !</p>
             </div>
             <div>
-                <button id="envoyer">Envoyer</button>
+                <button class="button-devis" id="envoyer">Envoyer</button>
             </div>
         </section>
     </div>
@@ -95,6 +96,6 @@
             <button class="button-devis" id="to-form">Retour</button>
         </div>
     </section>
-    <script src="script/script-exo8-TP8.js"></script>
 </body>
+<script src="script/script-exo8-TP8.js"></script>
 </html>

@@ -18,7 +18,6 @@
 
 body {
     margin: 0;
-    background-color: darkgray;
     font-family: 'DM_Sans', 'JetBrains_Mono', 'Montserrat';
 }
 
@@ -27,6 +26,8 @@ body {
 #center-zone {
     display: flex;
     justify-content: center;
+    background-color: gainsboro;
+    height: 100vh;
 }
 
 .zone-globale {
@@ -37,7 +38,8 @@ body {
     background-color: white;
     height: 55vh;
     width: 25%;
-    margin-top: 180px;
+    margin-top: 200px;
+    border-radius: 20px;
 }
 
 .formulaire {
@@ -54,13 +56,28 @@ body {
 
 .inputs {
     width: 90%;
-    height: 30px;
+    height: 35px;
+    text-decoration: none;
+    font-family: 'DM_Sans', 'JetBrains_Mono', 'Montserrat';
+    border-style: solid;
+    border-color: #151515;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+    text-indent: 10px;
+    text-shadow: #151515;
+    font-size: medium;
+}
+
+.inputs:hover {
+    background-color: #dcdcdc;
 }
 
 #empty-input {
     display: none;
     justify-content: center;
     align-items: center;
+    margin-top: 4px;
 }
 
 #height-error {
@@ -77,14 +94,13 @@ body {
 
 #envoyer {
     margin-top: 20px;
-    width: 150px;
-    height: 30px;
 }
 
 /*DEVIS*/
 
 #zone-devis {
     display: none;
+    background-color: none;
 }
 
 .signature {
@@ -120,5 +136,10 @@ body {
   .button-devis:hover {
     transform: translateY(-3px);
   }
-  
+
+@media print {
+    button {
+        display: none;
+    }
+}
 

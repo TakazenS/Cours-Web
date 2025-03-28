@@ -1,62 +1,41 @@
-let envoyer = document.getElementById('envoyer');
-envoyer.addEventListener('click', calcVolume);
-let retourForm = document.getElementById('to-form');
-retourForm.addEventListener('click', backToForm);
+document.addEventListener("DOMContentLoaded", function() {
+    let envoyer = document.getElementById('envoyer');
+    let toForm = document.getElementById('to-form');
+    let toPDF = document.getElementById('to-pdf');
+
+    envoyer.addEventListener("click", calcVolume);
+    toForm.addEventListener('click', backToForm);
+    toPDF.addEventListener('click', exporterPDF);
+});
+
 let zoneDevis = document.getElementById('zone-devis');
 let centerZone = document.getElementById('center-zone');
 let emptyInput = document.getElementById('empty-input');
 let heightError = document.getElementById('height-error');
-let prenom = document.getElementById('prenom');
-let nom = document.getElementById('nom');
-let surface = document.getElementById('surface');
-let epaisseur = document.getElementById('epaisseur');
-
-//91€/m3
-const prixMcube = 91;
-let prixCamion = 140;
-
 let ligne1 = document.getElementById('tableau').getElementsByTagName('tbody')[0].getElementsByTagName('tr')[0];
-
-let prixm3Tab = ligne1.getElementsByTagName('th')[1];
-prixm3Tab.textContent = `${prixMcube} €`;
-
-let qtem3Tab = ligne1.getElementsByTagName('th')[2];
-
-let prixhtTab = ligne1.getElementsByTagName('th')[3];
-
 let ligne2 = document.getElementById('tableau').getElementsByTagName('tbody')[0].getElementsByTagName('tr')[1];
 
-let prixcamionTab = ligne2.getElementsByTagName('th')[1];
-prixcamionTab.textContent = `${prixCamion} €`;
-
-let qteCamionTab = ligne2.getElementsByTagName('th')[2];
-
-let prixCamionTab = ligne2.getElementsByTagName('th')[3];
-
-let sousTotal = document.getElementById('sous-total');
-
-let tvaValue = document.getElementById('tva');
-
-let totalValue = document.getElementById('total');
-
-let dateValue = document.getElementById('date-devis');
-
 function calcVolume() {
-    prenom = prenom.value;
-    nom = nom.value;
-    surface = parseFloat(surface.value);
-    epaisseur = parseInt(epaisseur.value);
+    const prixMcube = 91;
+    let prixCamion = 140;
+    let prixm3Tab = ligne1.getElementsByTagName('th')[1];
+    prixm3Tab.textContent = `${prixMcube} €`;
+    let prixcamionTab = ligne2.getElementsByTagName('th')[1];
+    prixcamionTab.textContent = `${prixCamion} €`;
 
-    let fullNameCli = document.getElementById('full-name-cli');
+    let prenom = document.getElementById('prenom');
+    prenom = prenom.value;
+    let nom = document.getElementById('nom');
+    nom = nom.value;
+    let surface = document.getElementById('surface');
+    surface = parseFloat(surface.value);
+    let epaisseur = document.getElementById('epaisseur');
+    epaisseur = parseInt(epaisseur.value);
 
     if ((prenom === '' || nom === '') || (isNaN(surface) || isNaN(epaisseur) || (surface === undefined || epaisseur === undefined))) {
         heightError.style.display = 'none';
         emptyInput.style.display = 'flex';
         envoyer.style.marginTop = '12px';
-        prenom = '';
-        nom = '';
-        surface = '';
-        epaisseur = '';
         return;
     } else {
         emptyInput.style.display = 'none';
@@ -67,38 +46,41 @@ function calcVolume() {
         emptyInput.style.display = 'none';
         heightError.style.display = 'flex';
         envoyer.style.marginTop = '12px';
-        prenom = '';
-        nom = '';
-        surface = '';
-        epaisseur = '';
         return;
     } else {
         heightError.style.display = 'none';
         envoyer.style.marginTop = '20px';
     };
     
-    //m3
     let volumeBeton = parseFloat(surface * epaisseur / 100);
+    let qtem3Tab = ligne1.getElementsByTagName('th')[2];
     qtem3Tab.textContent = `${volumeBeton.toFixed(2)} m3`;
 
     let nbCamion = parseInt(Math.ceil(volumeBeton / 9));
+    let qteCamionTab = ligne2.getElementsByTagName('th')[2];
     qteCamionTab.textContent = `${nbCamion}`;
 
     let prixAllCamion = nbCamion * prixCamion;
+    let prixCamionTab = ligne2.getElementsByTagName('th')[3];
     prixCamionTab.textContent = `${prixAllCamion.toFixed(2)} €`;
 
     let prixHT = volumeBeton * prixMcube;
+    let prixhtTab = ligne1.getElementsByTagName('th')[3];
     prixhtTab.textContent = `${prixHT.toFixed(2)} €`;
 
     let prixTTC = prixHT + prixCamion * nbCamion;
+    let sousTotal = document.getElementById('sous-total');
     sousTotal.textContent = `Sous total : ${prixTTC.toFixed(2)} €`
 
     let tva = 20 * prixTTC / 100;
+    let tvaValue = document.getElementById('tva');
     tvaValue.textContent = `TVA (20%) : ${tva.toFixed(2)} €`;
 
     let totalWtva = tva + prixHT;
+    let totalValue = document.getElementById('total');
     totalValue.textContent = `TOTAL : ${totalWtva.toFixed(2)} €`;
 
+    let fullNameCli = document.getElementById('full-name-cli');
     fullNameCli.textContent = `${nom.toUpperCase()} ${prenom.toUpperCase()}`;
 
     let now = new Date();
@@ -106,6 +88,7 @@ function calcVolume() {
     let mois = String(now.getMonth() + 1).padStart(2, '0');
     let jour = String(now.getDate()).padStart(2, '0');
 
+    let dateValue = document.getElementById('date-devis');
     dateValue.innerHTML += `${jour}/${mois}/${annee}`;
 
     centerZone.style.display = 'none';
@@ -113,11 +96,12 @@ function calcVolume() {
     return;
 }
 
+function exporterPDF() {
+    window.print();
+    return;
+}
+
 function backToForm() {
-    prenom = '';
-    nom = '';
-    surface = '';
-    epaisseur = '';
     zoneDevis.style.display = 'none';
     centerZone.style.display = 'flex';
     return;
