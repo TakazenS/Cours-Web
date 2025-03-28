@@ -1,11 +1,11 @@
+let envoyer = document.getElementById('envoyer');
+envoyer.addEventListener('click', calcVolume);
+let retourForm = document.getElementById('to-form');
+retourForm.addEventListener('click', backToForm);
 let zoneDevis = document.getElementById('zone-devis');
 let centerZone = document.getElementById('center-zone');
 let emptyInput = document.getElementById('empty-input');
 let heightError = document.getElementById('height-error');
-
-let envoyer = document.getElementById('envoyer');
-envoyer.addEventListener('click', calcVolume);
-
 let prenom = document.getElementById('prenom');
 let nom = document.getElementById('nom');
 let surface = document.getElementById('surface');
@@ -41,9 +41,6 @@ let totalValue = document.getElementById('total');
 
 let dateValue = document.getElementById('date-devis');
 
-let retourForm = document.getElementById('to-form');
-retourForm.addEventListener('click', backToForm);
-
 function calcVolume() {
     prenom = prenom.value;
     nom = nom.value;
@@ -51,12 +48,15 @@ function calcVolume() {
     epaisseur = parseInt(epaisseur.value);
 
     let fullNameCli = document.getElementById('full-name-cli');
-    fullNameCli.textContent = `${nom.toUpperCase()} ${prenom.toUpperCase()}`;
 
-    if ((prenom === '' || nom === '') || (isNaN(surface) || isNaN(epaisseur))) {
+    if ((prenom === '' || nom === '') || (isNaN(surface) || isNaN(epaisseur) || (surface === undefined || epaisseur === undefined))) {
         heightError.style.display = 'none';
         emptyInput.style.display = 'flex';
         envoyer.style.marginTop = '12px';
+        prenom = '';
+        nom = '';
+        surface = '';
+        epaisseur = '';
         return;
     } else {
         emptyInput.style.display = 'none';
@@ -67,12 +67,16 @@ function calcVolume() {
         emptyInput.style.display = 'none';
         heightError.style.display = 'flex';
         envoyer.style.marginTop = '12px';
+        prenom = '';
+        nom = '';
+        surface = '';
+        epaisseur = '';
         return;
     } else {
         heightError.style.display = 'none';
         envoyer.style.marginTop = '20px';
     };
-
+    
     //m3
     let volumeBeton = parseFloat(surface * epaisseur / 100);
     qtem3Tab.textContent = `${volumeBeton.toFixed(2)} m3`;
@@ -95,6 +99,8 @@ function calcVolume() {
     let totalWtva = tva + prixHT;
     totalValue.textContent = `TOTAL : ${totalWtva.toFixed(2)} €`;
 
+    fullNameCli.textContent = `${nom.toUpperCase()} ${prenom.toUpperCase()}`;
+
     let now = new Date();
     let annee = now.getFullYear();
     let mois = String(now.getMonth() + 1).padStart(2, '0');
@@ -104,10 +110,16 @@ function calcVolume() {
 
     centerZone.style.display = 'none';
     zoneDevis.style.display = 'flex';
+    return;
 }
 
 function backToForm() {
+    prenom = '';
+    nom = '';
+    surface = '';
+    epaisseur = '';
     zoneDevis.style.display = 'none';
     centerZone.style.display = 'flex';
+    return;
 }
 
