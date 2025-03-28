@@ -21,9 +21,9 @@ function calcVolume() {
     const prixMcube = 91;
     let prixCamion = 140;
     let prixm3Tab = ligne1.getElementsByTagName('th')[1];
-    prixm3Tab.textContent = `${prixMcube} €`;
+    prixm3Tab.textContent = `${prixMcube} € / m3`;
     let prixcamionTab = ligne2.getElementsByTagName('th')[1];
-    prixcamionTab.textContent = `${prixCamion} €`;
+    prixcamionTab.textContent = `${prixCamion} € / Camion`;
 
     let prenom = document.getElementById('prenom');
     prenom = prenom.value;
