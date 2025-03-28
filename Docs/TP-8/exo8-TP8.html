@@ -10,6 +10,11 @@
     <title>TP 8 Exo 8</title>
 </head>
 <body>
+    <header class="menu_bar" id="menu_bar">
+        <nav class="menu-TP8">
+            <a class="nav_page" href="../menuTP8.html">Menu TP 8</a>
+        </nav>
+    </header>
     <div class="center-zone" id="center-zone">
         <section class="zone-globale">
             <div class="formulaire" id="formulaire">
@@ -67,33 +72,37 @@
                         </tr>
                     </thead>
                     <tbody class="table-body">
-                        <tr>
-                            <th scope="row">Volume béton</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                        <tr class="bodyTab">
+                            <th class="firstCase2" scope="row">Volume béton</th>
+                            <th class="prixTab2"></th>
+                            <th class="quantiteTab2"></th>
+                            <th class="totalTab2"></th>
                         </tr>
-                        <tr>
-                            <th scope="row">Transport camion</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                        <tr class="bodyTab2">
+                            <th class="firstCase3" scope="row">Transport camion</th>
+                            <th class="prixTab3"></th>
+                            <th class="quantiteTab3"></th>
+                            <th class="totalTab3"></th>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div class="reglement">
-                <p class="sous-total"><strong id="sous-total"></strong></p>
-                <p class="tva"><strong id="tva"></strong></p>
-                <p class="total"><strong id="total"></strong></p>
+                <div class="container-regl">
+                    <p class="sous-total"><strong id="sous-total"></strong></p>
+                    <p class="tva"><strong id="tva"></strong></p>
+                    <p class="total"><strong id="total"></strong></p>
+                </div>
             </div>
         </main>
         <div class="zone-sign">
             <p class="signature"><strong>Signature du client : </strong></p>
         </div>
-        <div class="click-to-pdf">
-            <button class="button-devis" id="to-pdf">Imprimer en PDF</button>
-            <button class="button-devis" id="to-form">Retour</button>
+        <div class="container-devis-btn">
+            <div class="devis-btn-in">
+                <button class="button-devis" id="to-pdf">Imprimer en PDF</button>
+                <button class="button-devis" id="to-form">Retour</button>
+            </div>
         </div>
     </section>
 </body>

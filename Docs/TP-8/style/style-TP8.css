@@ -21,6 +21,44 @@ body {
     font-family: 'DM_Sans', 'JetBrains_Mono', 'Montserrat';
 }
 
+.menu_bar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+    background: rgba(51, 51, 51, 0.7);
+}
+
+.menu-TP3 {
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav_page {
+    color: white;
+    text-decoration: none;
+    background-color: #333;
+    padding: 12px;
+    border-radius: 10px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav_page:hover {
+    background-color: #777;
+    transform: scale(1.1);
+}
+
 /*FORMULAIRE*/
 
 #center-zone {
@@ -281,6 +319,151 @@ body {
     font-weight: normal;
 }
 
+
+.table-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: gainsboro;
+    width: 100%;
+    height: 100%;
+}
+
+.bodyTab {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    height: 3vh;
+}
+
+.firstCase2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 33%;
+    height: 100%;
+    border: 1px solid black;
+    border-right: none;
+}
+
+.prixTab2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 15%;
+    height: 100%;
+    border: 1px solid black;
+    border-right: none;
+}
+
+.quantiteTab2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 24%;
+    height: 100%;
+    border: 1px solid black;
+    border-right: none;
+}
+
+.totalTab2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 28%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.bodyTab2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    height: 3vh;
+}
+
+.firstCase3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 33%;
+    height: 100%;
+    border: 1px solid black;
+    border-right: none;
+    border-top: none;
+}
+
+.prixTab3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 15%;
+    height: 100%;
+    border: 1px solid black;
+    border-right: none;
+    border-top: none;
+}
+
+.quantiteTab3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 24%;
+    height: 100%;
+    border: 1px solid black;
+    border-right: none;
+    border-top: none;
+}
+
+.totalTab3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 28%;
+    height: 100%;
+    border: 1px solid black;
+    border-top: none;
+}
+
+.reglement {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 90%;
+    height: 15vh;
+}
+
+.container-regl {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-regl p {
+    margin: 0;
+    margin-bottom: 6px;
+}
+
+.zone-sign {
+    margin-top: 100px;
+    margin-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 90%;
+}
+
 .signature {
     position: relative;
     display: inline-block;
@@ -298,6 +481,23 @@ body {
     transform: translateY(-50%);
 }
 
+.container-devis-btn {
+    margin-top: 80px;
+    margin-left: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 90%;
+}
+
+.devis-btn-in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 260px;
+}
+
 .button-devis {
     padding: 16px 20px;
     display: inline;
@@ -313,6 +513,7 @@ body {
   }
   
   .button-devis:hover {
+    background-color: #474747;
     transform: translateY(-3px);
   }
 

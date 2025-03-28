@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
     toPDF.addEventListener('click', exporterPDF);
 });
 
-let zoneDevis = document.getElementById('zone-devis');
+
 let centerZone = document.getElementById('center-zone');
+let zoneDevis = document.getElementById('zone-devis');
+let header = document.getElementById('menu_bar');
 let emptyInput = document.getElementById('empty-input');
 let heightError = document.getElementById('height-error');
 let ligne1 = document.getElementById('tableau').getElementsByTagName('tbody')[0].getElementsByTagName('tr')[0];
@@ -32,7 +34,7 @@ function calcVolume() {
     let epaisseur = document.getElementById('epaisseur');
     epaisseur = parseInt(epaisseur.value);
 
-    if ((prenom === '' || nom === '') || (isNaN(surface) || isNaN(epaisseur) || (surface === undefined || epaisseur === undefined))) {
+    if ((prenom === '' || nom === '') || (!isNaN(Number(prenom)) || !isNaN(Number(nom))) || (isNaN(surface) || isNaN(epaisseur) || (surface === undefined || epaisseur === undefined))) {
         heightError.style.display = 'none';
         emptyInput.style.display = 'flex';
         envoyer.style.marginTop = '12px';
@@ -92,6 +94,7 @@ function calcVolume() {
     dateValue.innerHTML += `${jour}/${mois}/${annee}`;
 
     centerZone.style.display = 'none';
+    header.style.display = 'none'
     zoneDevis.style.display = 'flex';
     return;
 }
@@ -104,6 +107,7 @@ function exporterPDF() {
 function backToForm() {
     zoneDevis.style.display = 'none';
     centerZone.style.display = 'flex';
+    header.style.display = 'flex'
     envoyer.style.marginTop = '35px';
     return;
 }
