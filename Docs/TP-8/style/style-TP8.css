@@ -24,9 +24,8 @@ body {
 
 /*FORMULAIRE*/
 
-.center-zone {
-    /*A CHANGER LORS DE L'AFFICHAGE DU DEVIS*/
-    display: none;
+#center-zone {
+    display: flex;
     justify-content: center;
 }
 
@@ -36,9 +35,9 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: white;
-    height: 60vh;
-    width: 30%;
-    margin-top: 150px;
+    height: 55vh;
+    width: 25%;
+    margin-top: 180px;
 }
 
 .formulaire {
@@ -84,5 +83,42 @@ body {
 
 /*DEVIS*/
 
+#zone-devis {
+    display: none;
+}
 
+.signature {
+    position: relative;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.signature::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 90%;
+    width: 180px;
+    height: 1.8px;
+    background-color: black;
+    transform: translateY(-50%);
+}
+
+.button-devis {
+    padding: 16px 20px;
+    border: none;
+    outline: none;
+    background-color: #151515;
+    font-family: 'DM_Sans', 'JetBrains_Mono', 'Montserrat';
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+  }
+  
+  .button-devis:hover {
+    transform: translateY(-3px);
+  }
+  
 

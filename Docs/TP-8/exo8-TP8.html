@@ -9,7 +9,7 @@
     <title>TP 8 Exo 8</title>
 </head>
 <body>
-    <div class="center-zone">
+    <div class="center-zone" id="center-zone">
         <section class="zone-globale">
             <div class="formulaire" id="formulaire">
                 <label class="labels1" for="prenom">Prénom :</label>
@@ -32,33 +32,67 @@
             </div>
         </section>
     </div>
-    <section class="zone-devis">
+    <section class="zone-devis" id="zone-devis">
         <div class="zone-n-devis">
             <h2 class="n-devis">DEVIS N°12345</h2>
         </div>
         <section class="info">
             <div class="entreprise">
-
+                <h3 class="full-name" id="full-name">GUILLAUME PASTY</h3>
+                <a class="tel" href="tel:0600300409">0600300409</a>
+                <a class="mail" href="mailto:not.mail@notmail.com">not.mail@notmail.com</a>
+                <p class="address">420 Route des Fruits</p>
             </div>
             <div class="client">
-
+                <h3 class="attenioned-to">À L'ATTENTION DE</h3>
+                <p class="full-name" id="full-name-cli"></p>
+                <a class="tel" href="tel:0600001100">0600001100</a>
+                <a class="mail" href="mailto:not.mail@again.com">not.mail@again.com</a>
+            </div>
+            <div class="date">
+                <p class="date-devis" id="date-devis"><strong>Date du devis : </strong></p>
+                <p class="validite-devis"><strong>Validité du devis :</strong> 1 mois</p>
             </div>
         </section>
         <main class="resultats">
             <div class="container-tab">
-                <table class="tableau">
-
+                <table class="tableau" id="tableau">
+                    <thead class="table-head">
+                        <tr>
+                            <th scope="col">DESCRIPTION</th>
+                            <th scope="col">PRIX</th>
+                            <th scope="col">QUANTITÉ</th>
+                            <th scope="col">TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                        <tr>
+                            <th scope="row">Volume béton</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Transport camion</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
             <div class="reglement">
-
+                <p class="sous-total"><strong id="sous-total"></strong></p>
+                <p class="tva"><strong id="tva"></strong></p>
+                <p class="total"><strong id="total"></strong></p>
             </div>
         </main>
         <div class="zone-sign">
-            
+            <p class="signature"><strong>Signature du client : </strong></p>
         </div>
         <div class="click-to-pdf">
-            <button class="to-pdf-button" id="to-pdf">Imprimer en PDF</button>
+            <button class="button-devis" id="to-pdf">Imprimer en PDF</button>
+            <button class="button-devis" id="to-form">Retour</button>
         </div>
     </section>
     <script src="script/script-exo8-TP8.js"></script>
