@@ -52,6 +52,11 @@ body {
 
 .labels {
     margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.labels1 {
+    margin-bottom: 5px;
 }
 
 .inputs {
@@ -65,12 +70,14 @@ body {
     background-color: #ffffff;
     transition: background-color 0.2s ease;
     text-indent: 10px;
-    text-shadow: #151515;
     font-size: medium;
+    transition: all 0.25s ease-out;
 }
 
 .inputs:hover {
-    background-color: #dcdcdc;
+    background-color: #ececec;
+    box-shadow: 0px 6px 5px #dcdcdc;
+    transform: translateY(-2px);
 }
 
 #empty-input {
@@ -84,6 +91,7 @@ body {
     display: none;
     justify-content: center;
     align-items: center;
+    margin-top: 4px;
 }
 
 .text-alert {
@@ -93,14 +101,184 @@ body {
 }
 
 #envoyer {
-    margin-top: 20px;
+    margin-top: 35px;
 }
 
 /*DEVIS*/
 
 #zone-devis {
     display: none;
+    flex-direction: column;
     background-color: none;
+}
+
+.zone-n-devis {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 20vh;
+}
+
+.info {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2);
+    grid-template-rows: repeat(2);
+    width: 100%;
+}
+
+.entreprise {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 100px;
+}
+
+.full-name {
+    margin-bottom: 5px;
+}
+
+.tel, .mail {
+    text-decoration: none;
+    margin-bottom: 2px;
+    color: black;
+}
+
+.address {
+    margin: 0;
+}
+
+.client {
+    grid-column: 2 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 100px;
+}
+
+.attentioned-to {
+    margin-bottom: 5px;
+}
+
+.full-name-cli {
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.address-cli {
+    margin: 0;
+}
+
+.date {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 100px;
+}
+
+.date-devis {
+    margin-bottom: 2px;
+}
+
+.validite-devis {
+    margin: 0;
+}
+
+.resultats {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 20vh;
+    margin-top: 30px;
+}
+
+.container-tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.tableau {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.table-head {
+    display: flex;
+    align-items: center;
+    background-color: #a9c4e7;
+    width: 100%;
+    height: 3vh;
+}
+
+.headerTab {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.descriptionTab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 33%;
+    height: 100%;
+    border: 1px solid black;
+    border-right: none;
+}
+
+.prixTab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 15%;
+    height: 100%;
+    border: 1px solid black;
+    border-right: none;
+}
+
+.quantiteTab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 24%;
+    height: 100%;
+    border: 1px solid black;
+    border-right: none;
+}
+
+.totalTab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 28%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.table-body tr th {
+    font-weight: normal;
 }
 
 .signature {

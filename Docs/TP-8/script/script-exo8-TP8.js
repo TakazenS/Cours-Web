@@ -39,7 +39,7 @@ function calcVolume() {
         return;
     } else {
         emptyInput.style.display = 'none';
-        envoyer.style.marginTop = '20px';
+        envoyer.style.marginTop = '35px';
     };
 
     if (epaisseur < 15 || epaisseur > 35) {
@@ -49,7 +49,7 @@ function calcVolume() {
         return;
     } else {
         heightError.style.display = 'none';
-        envoyer.style.marginTop = '20px';
+        envoyer.style.marginTop = '35px';
     };
     
     let volumeBeton = parseFloat(surface * epaisseur / 100);
@@ -104,6 +104,7 @@ function exporterPDF() {
 function backToForm() {
     zoneDevis.style.display = 'none';
     centerZone.style.display = 'flex';
+    envoyer.style.marginTop = '35px';
     return;
 }
 
