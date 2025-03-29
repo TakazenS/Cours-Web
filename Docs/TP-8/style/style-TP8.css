@@ -288,7 +288,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    width: 15%;
+    width: 17%;
     height: 100%;
     border: 1px solid black;
     border-right: none;
@@ -299,7 +299,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    width: 24%;
+    width: 25%;
     height: 100%;
     border: 1px solid black;
     border-right: none;
@@ -310,7 +310,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    width: 28%;
+    width: 25%;
     height: 100%;
     border: 1px solid black;
 }
@@ -353,7 +353,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    width: 15%;
+    width: 17%;
     height: 100%;
     border: 1px solid black;
     border-right: none;
@@ -364,7 +364,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    width: 24%;
+    width: 25%;
     height: 100%;
     border: 1px solid black;
     border-right: none;
@@ -375,7 +375,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    width: 28%;
+    width: 25%;
     height: 100%;
     border: 1px solid black;
 }
@@ -405,7 +405,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    width: 15%;
+    width: 17%;
     height: 100%;
     border: 1px solid black;
     border-right: none;
@@ -417,7 +417,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    width: 24%;
+    width: 25%;
     height: 100%;
     border: 1px solid black;
     border-right: none;
@@ -429,7 +429,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    width: 28%;
+    width: 25%;
     height: 100%;
     border: 1px solid black;
     border-top: none;
@@ -446,7 +446,8 @@ body {
 .container-regl {
     margin-top: 8px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -518,8 +519,34 @@ body {
   }
 
 @media print {
+
     #to-pdf, #to-form {
         display: none;
     }
+
+    .prixTab {
+        width: 20%;
+    }
+
+    .quantiteTab {
+        width: 22%;
+    }
+
+    .prixTab2 {
+        width: 20%;
+    }
+
+    .quantiteTab2 {
+        width: 22%;
+    }
+
+    .prixTab3 {
+        width: 20%;
+    }
+
+    .quantiteTab3 {
+        width: 22%;
+    }
+
 }
 
