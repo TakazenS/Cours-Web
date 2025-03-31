@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'DM_Sans';
+    src: url('../../../Fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf') format('truetype'),
+         url('../../../Fonts/DM_Sans/DMSans-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+    
+@font-face {
+    font-family: 'JetBrains_Mono';
+    src: url('../../../Fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf') format('truetype'),
+         url('../../../Fonts/JetBrains_Mono/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+}
+    
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../../Fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype'),
+         url('../../../Fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    font-family: 'DM_Sans', 'JetBrains_Mono', 'Montserrat';
+}
+
+.menu_bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+    background: rgba(51, 51, 51, 0.7);
+}
+
+.menu-TP9 {
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav_page {
+    color: white;
+    text-decoration: none;
+    background-color: #333;
+    padding: 12px;
+    border-radius: 10px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav_page:hover {
+    background-color: #777;
+    transform: scale(1.1);
+}
+
+/********************* exo 1 *********************/
+
+.main-exo1 {
+    position: relative;
+}
+
+.section-exo1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-txt-exo1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    margin-top: 2%;
+}
+
+.txt-exo1 {
+    margin: 0;
+    position: relative;
+
+}
+
+
+/********************* exo 2 *********************/
+
+
+
+
+
+/********************* exo 3 *********************/
+
+
+
+
+
+/********************* exo 4 *********************/
+
+
+
+
+

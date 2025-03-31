@@ -151,7 +151,7 @@ body {
 }
 
 .menu-index {
-    width: 55%;
+    width: 56%;
     display: flex;
     justify-content: space-around;
 }
@@ -192,6 +192,11 @@ body {
     justify-content: space-around;
 }
 
+.menu-TP8 {
+    width: 46%;     
+    display: flex;
+    justify-content: space-around;
+}
 
 .nav_page {
     color: white;
