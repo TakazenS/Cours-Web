@@ -78,6 +78,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 500px;
     margin-top: 2%;
 }
@@ -85,9 +86,7 @@ body {
 .txt-exo1 {
     margin: 0;
     position: relative;
-
 }
-
 
 /********************* exo 2 *********************/
 
