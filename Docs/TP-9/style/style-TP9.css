@@ -79,13 +79,25 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 500px;
+    width: 560px;
     margin-top: 2%;
 }
 
 .txt-exo1 {
     margin: 0;
     position: relative;
+}
+
+.test1 {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    border-style: solid;
+    width: 260px;
+    top: 140px;
+    left: 675px;
 }
 
 /********************* exo 2 *********************/
